@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Catcraft!</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="creating FFXIV mods" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/a-test/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Catcraft!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Catcraft!" />
+    <meta property="og:description" content="creating FFXIV mods" />
+    <meta property="og:url" content="/a-test/" />
+    <meta property="og:image" content="/assets/images/blog-icon.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Catcraft!" />
+    <meta name="twitter:description" content="creating FFXIV mods" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/blog-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Catcraft!" />
+    <meta name="twitter:site" content="@catcraftxiv" />
+    <meta name="twitter:creator" content="@catcraftxiv" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Catcraft!",
+        "logo": "/assets/images/blog-icon.png"
+    },
+    "url": "/a-test/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/blog-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/a-test/"
+    },
+    "description": "creating FFXIV mods"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Catcraft!" href="/feed.xml" />
+
+
+</head>
+<body class="home-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer " style="background-image:  url(/assets/images/blog-cover.jpg) ">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                
+                    <img class="site-logo" src="/assets/images/blog-icon.png" alt="Catcraft!"/>
+                
+            </h1>
+            <h2 class="site-description">creating FFXIV mods</h2>
+        </div>
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Paid</a></li>
+	
+	
+	<li class="nav-home" role="menuitem"><a href="https://www.xivmodarchive.com/user/111283" target="_blank">XMA</a></li>
+	
+	
+	
+	
+	
+	<li class="nav-home" role="menuitem"><a href="https://www.patreon.com/catcraftFFXIV" target="_blank">Patreon</a></li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="nav-home" role="menuitem"><a href="https://x.com/catcraftxiv" target="_blank">Twitter</a></li>
+	
+	
+	
+	<li class="nav-home" role="menuitem"><a href="https://discord.gg/yPbUXazxQ3" target="_blank">Discord</a></li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!--    <li class="nav-home" role="menuitem"><a href="https://www.xivmodarchive.com/user/111283" target="_blank">XMA</a></li>
+    <li class="nav-home" role="menuitem"><a href="https://www.glamourdresser.com/author/catcraft" target="_blank">TGD</a></li>
+    <li class="nav-home" role="menuitem"><a href="http://patreon.com/catcraftFFXIV" target="_blank">Patreon</a></li>
+    <li class="nav-home" role="menuitem"><a href="https://bsky.app/profile/catcraftxiv.bsky.social" target="_blank">Bluesky</a></li>
+    <li class="nav-home" role="menuitem"><a href="https://x.com/catcraftxiv" target="_blank">Twitter</a></li>
+    <li class="nav-home" role="menuitem"><a href="https://discord.gg/yPbUXazxQ3" target="_blank">Discord</a></li> -->
+	<li class="nav-home" role="menuitem"><a href="/commission">Commission</a></li>
+	<li class="nav-home" role="menuitem"><a href="/a">Album</a></li>
+<!--	<li class="nav-home" role="menuitem"><a href="/tags">Filters</a></li> -->
+    <!-- Default menu items
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
+    -->
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+			<a class="social-link social-link-tw" href="/tags/"><svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Filter-Filled"> <path d="M23,2v0.5l-8,10v8l-5,2v-10l-8-10V2H23z"></path> </g> </g></svg></a>
+		<!--
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/catcraftxiv" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+			-->
+        </div>
+<!--        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+         -->
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<style>
+/* image gallery */
+* {box-sizing:border-box}
+
+  /* photo album */
+  .photoCard {
+	position: relative;
+	display: flex;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	margin-bottom: 1.4em;
+}
+
+  /* author name on photo card */
+  .photoCardText {
+    position: absolute;
+    color: black;
+    padding-left: 15px;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    bottom: 25px;
+  }
+
+  .album .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto !important;
+    margin-bottom: 0px;
+    margin-left: auto !important;
+    justify-content: flex-start;
+  }
+
+  .album .responsive-container-block.bg {
+    max-width: 1320px;
+    margin: 0 0 0 0;
+    justify-content: space-between;
+  }
+
+  .album .img {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding-bottom: 16%;
+    background-color: rgb(255 255 255);
+    object-fit: cover;
+    min-height: 290px;
+    object-position: top;
+  }
+
+  .album #i9rb {
+    color: black;
+  }
+
+  .album #ir6i {
+    color: black;
+  }
+
+  .album #ikz3b {
+    color: black;
+  }
+
+  .album .responsive-container-block.img-cont {
+    flex-direction: column;
+    max-width: 33.3%;
+    min-height: auto;
+    margin: 0 0 0 0;
+    height: 100%;
+  }
+
+  .album #ipix {
+    color: black;
+  }
+
+  .album #ipzoh {
+    color: black;
+  }
+
+  .album #ig5q8 {
+    color: black;
+  }
+
+  .album #imtzl {
+    color: black;
+  }
+
+  .album #i53es {
+    color: black;
+  }
+
+  .album .img.img-big {
+    height: 50%;
+    margin: 0 0 16px 0;
+  }
+
+  @media (max-width: 1024px) {
+    .album .img {
+      margin: 0 0 18px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .album .img {
+      max-width: 32.5%;
+      margin: 0 0 0 0;
+    }
+
+    .album .responsive-container-block.bg {
+      flex-direction: column;
+    }
+
+    .album .responsive-container-block.img-cont {
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .album .img.img-big {
+      max-width: 49%;
+      margin: 0 0 16px 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .album .img {
+      max-width: 94%;
+      margin: 0 0 25px 0;
+    }
+
+    .album .responsive-container-block.img-cont {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .album .img.img-big {
+      max-width: 94%;
+      margin: 0 0 25px 0;
+    }
+
+    .album .img.img-last {
+      margin: 0 0 5px 0;
+    }
+  }
+  
+  .img {
+	border-radius: 0;
+}
+
+</style>
+
+<!-- random tweets -->
+<script type="text/javascript">
+
+  window.tweetsEmbed = [`/web/assets/img/gallery/GMhY9X5WMAAeW1T-orig_c.jpg`,  `/web/assets/img/gallery/GMiA_xIagAA7NfX-orig_c.jpg`,  `/web/assets/img/gallery/GMjE_DMWgAAO_Pn-orig_c.jpg`,  `/web/assets/img/gallery/GMuEdsWaIAAbLhV-orig_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2023-06-28-21-52-13_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2023-07-17-21-27-52_c.jpg`,  `/web/assets/img/gallery/tail_c.jpg`,  `/web/assets/img/gallery/GNKtyheWMAA0ZhV-orig_c.jpg`,  `/web/assets/img/gallery/GNLf77VXEAAiiC-orig_c.jpg`,  `/web/assets/img/gallery/GNLf_oJW4AAFAEV-orig_c.jpg`,  `/web/assets/img/gallery/GNLg8YyXAAAmC5F-orig_c.jpg`,  `/web/assets/img/gallery/GNQBkAyXQAAlRK7-orig_c.jpg`,  `/web/assets/img/gallery/GNa_lHsXUAAqPSj-orig_c.jpg`,  `/web/assets/img/gallery/GL50ZRYXMAAm_I8-orig_c.jpg`,  `/web/assets/img/gallery/GNztktBXwAAJMRb-orig_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2024-05-16-18-22-15_c.jpg`,  `/web/assets/img/gallery/GN3TbSMbsAAQgxX_c.jpg`,  `/web/assets/img/gallery/image1_c.jpg`,  `/web/assets/img/gallery/image_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2024-05-19-14-08-52_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2023-07-26-16-01-14_c.jpg`,  `/web/assets/img/gallery/ffxiv-dx11-2023-07-26-15-58-03_c.jpg`,  `/web/assets/img/gallery/GP5BpqGXwAAomwj-orig_c.jpg`,  `/web/assets/img/gallery/GP_DrlwXoAA0QlI-orig_c.jpg`,  `/web/assets/img/gallery/GQYwuezXAAIddbB-orig_c.jpg`,  `/web/assets/img/gallery/GQYxbeDXwAAOCFK-orig_c.jpg`,  `/web/assets/img/gallery/GRGIynyX0AEzCat-orig_c.jpg`,  `/web/assets/img/gallery/GTKrlfCWAAAHpGa-orig_c.jpg`,  `/web/assets/img/gallery/Zamira561 (1)_c.jpg`,  `/web/assets/img/gallery/ffxiv_dx11_2024-07-28_12-49-07.jpg`,  `/assets/images/edwardia/2024-08-06_21-17-56-529_Sakis_Night_Equalizer.jpg`,  `/web/assets/img/gallery/ffxiv_dx11 2024-08-05 19-46-34 Maya_Adorable_Gameplay.jpg`,  `/web/assets/img/gallery/GU4ScdOXAAIC-27.jpg`,  `/web/assets/img/gallery/de43e729_original.jpg`,  `/web/assets/img/gallery/2024-08-28_11-10-48_Nacht_Pyretic (1).jpg`,  `/web/assets/img/gallery/2024-08-28_11-12-16_Nacht_Pyretic (1).jpg`,  `/web/assets/img/gallery/ffxiv_dx11_2024-08-27_20-26-28.jpg`,  `/assets/images/edwardia/ffxiv_dx11_2024-08-27_23-19-41.jpg`,  `/web/assets/img/gallery/image-46.jpg`,  `/web/assets/img/gallery/2024-09-24_07-46-19-308_Sakis_Night_Equalizer2-Recovered-gigapixel-hq-scale-6_00x.jpg`,  `/web/assets/img/gallery/ffxiv_dx11 2024-09-24 00-44-37 Maya Adorable Gameplay1.jpg`,  `/web/assets/img/gallery/ffxiv_dx11_2024-09-23_15-56-51.jpg`,  `/web/assets/img/gallery/ffxiv_dx11_2024-09-23_16-18-58.jpg`,  `/web/assets/img/gallery/idisgpose15edit1.jpg`,  `/web/assets/img/gallery/idisgpose16edit1.jpg`,  `/web/assets/img/gallery/image (1).jpg`,  `/web/assets/img/gallery/https___x.com_solaris_xiv_status_1839463213655794164-img1.jpg`,  `/web/assets/img/gallery/2024-10-07_21-10-43_Neneko_-_Absolute_Scylle_Adjustments (1).jpg`,  `/web/assets/img/gallery/ffxiv_dx11 2024-10-14 19-50-20 Maya Adorable Gameplay.jpg`,  `/web/assets/img/gallery/https___x.com_yeuxbaelsar_status_1843244881806000379-img1.jpg`,  `/web/assets/img/gallery/https___x.com_yeuxbaelsar_status_1843969671055196391-img3.jpg`,  `/web/assets/img/gallery/2024-10-16_20-27-19-534_Sakis_Night_Equalizer2.jpg`,  `/web/assets/img/gallery/2024-10-15_15-07-40-676_Sakis_Night_Equalizer2.jpg`,  `/web/assets/img/gallery/bafkreiasxhlstkjw4wjm7fb6tjorgxm54wbc3q6ul6srb3z5fcvooiq5ni.jpg`,  `/web/assets/img/gallery/bafkreidc54izd7efqgeuk4tvawsxqlfdhmjpripshpjyc53o52vxqeh364.jpg`,  `/web/assets/img/gallery/bafkreigcpu6axid6fxdbmarqy77zgkfeuz57jyed5exff6yhc3bio74v3y.jpg`,  `/web/assets/img/gallery/bafkreiakenhtmp4g5jhk2opbu72c3rihcvuifljkd3vmd7ulu3wnq6zp4u.jpg`,  `/web/assets/img/gallery/bafkreibc3wefkeqyswbi6c4k47evabryk276yjpznaes5jsp64n42mtf6i.jpg`,  `/web/assets/img/gallery/bafkreiewduouwbxcqjdayovqoisafryysdeo2gzpg5lsl6jnuytlgba2fm.jpg`,  `/web/assets/img/gallery/bafkreieba6hbmv5vqrxsivjlohehafh2gkzk36p4xvj5ucib2eochwe6gy.jpg`,  `/web/assets/img/gallery/bafkreignirb3ppkdzaec4pzqcqcqld53lkrtrlmsrb4lgrkxafycps3fye.jpg`,  `/assets/images/eclipse/ellie1.jpg`,  `/assets/images/eclipse/cover.jpg`,  `/assets/images/edwardia/cover.jpg`,  `/assets/images/pastel-mood/cover_new.jpg`,  `/assets/images/gothic-greatsword/ffxiv_dx11 2024-10-24 02-59-57 Maya Adorable Gameplay.jpg`,  `/assets/images/crystal-clear/tsukuyomi 3l7bgtchkrt27_p0.jpg`,  `/assets/images/august/cover.jpg`,  `/assets/images/red-sharpness/cover.jpg`,  `/assets/images/sweetheart-sweater/cover.jpg`,  `/assets/images/lovely-heart/ffxiv_dx11_2024-10-27_15-30-53.jpg`,  `/assets/images/lovely-heart/cover.jpg`,  `/assets/images/crystal-clear/tsukuyomi 3l7hf37v5kt2q_p0.jpg`,  `/assets/images/lovely-heart/2024-10-31_17-52-23-573_Sakis_Night_Equalizer2_2.jpg`,  `/assets/images/corvette/ffxiv_dx11_2024-11-24_15-48-04.jpg`,  `/assets/images/gallery/image.jpg`,  `/assets/images/gallery/image1.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-09_173647_processed3.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-10_001652.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-10_135318.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-10_205952.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-12_011047.jpg`,  `/assets/images/crystal-clear/Snow_dayt.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-16_111718.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-16_175132.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-18_122809.jpg`,  `/assets/images/crystal-clear/Screenshot_2024-12-18_133945.jpg`,  `/assets/images/darling-sweater/ffxiv_dx11 2024-12-27 14-50-10 Maya Adorable Gameplay_edit.jpg`,  `/assets/images/darling-sweater/ffxiv_dx11_2024-12-27_11-37-57.jpg`,  `/assets/images/darling-sweater/ffxiv_dx11_2024-12-27_11-40-09.jpg`,  `/assets/images/darling-sweater/ffxiv_dx11_2024-12-27_11-41-26.jpg`,  `/assets/images/darling-sweater/2025-01-04_17-17-48-801_Sakis_Night_Equalizer2.jpg`,  `/assets/images/gothic-bloom/ffxiv_dx11 2025-01-15 01-26-57 Maya Adorable Gameplay_edit.jpg`,  `/assets/images/gothic-bloom/ffxiv_dx11 2025-01-15 01-30-42 Maya Adorable Gameplay_edit.jpg`,  `/assets/images/gothic-bloom/ffxiv_dx11 2025-01-15 01-35-28 Maya Adorable Gameplay_edit.jpg`,  `/assets/images/gothic-bloom/2025-01-15_21-13-57-804_Sakis_Night_Equalizer2.jpg`,  `/assets/images/nova-suit/2025-02-01_00-20-41-706_Sakis_Night_Equalizer2.jpg`,  `/assets/images/short-and-sweet/2025-02-27_20-01-00-080_Sakis_Night_Equalizer2.jpg`,  `/assets/images/short-and-sweet/cover.jpg`,  `/assets/images/short-and-sweet/ffxiv_dx11_2025-02-26_15-08-25.jpg`,  `/assets/images/short-and-sweet/image (1).jpg`,  `/assets/images/short-and-sweet/image.jpg`,  `/assets/images/short-and-sweet/2025-02-27_02-06-09-243_TRUEREALISM_-_Base.jpg`,  `/assets/images/short-and-sweet/TRUEREALISM_-_DT.jpg`,  `/assets/images/short-and-sweet/ffxiv_dx11_2025-02-26_16-49-12EDITED.jpg`,  `/assets/images/short-and-sweet/ffxiv_dx11_2025-02-26_14-49-11.jpg` ];
+  window.tweetsName = [`Catcraft`,  `milkchanbread`,  `Ellie`,  `MSaltedcaramel`,  `Sebastard`,  `Sebastard`,  `Evie`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `idis`,  `idis`,  `Ellie`,  `idis`,  `idis`,  `milkchanbread`,  `idis`,  `idis`,  `idis`,  `Catcraft`,  `Catcraft`,  `Ellie`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `Ellie`,  `Catcraft`,  `Zamira`,  `Evie`,  `Saki`,  `Catcraft`,  `idis`,  `Saki`,  `S’cylle`,  `S’cylle`,  `idis`,  `idis`,  `Darvina`,  `Saki`,  `Catcraft`,  `Ellie`,  `Ellie`,  `idis`,  `idis`,  `idis`,  `The Red Sun`,  `S’cylle`,  `Catcraft`,  `Yeux Baelsar`,  `Yeux Baelsar`,  `Saki`,  `Saki`,  `Nyx`,  `Nyx`,  `Nyx`,  `Nyx`,  `Nyx`,  `Nyx`,  `Nyx`,  `Nyx`,  `Ellie`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `Nyx`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `idis`,  `Catcraft`,  `Nyx`,  `Saki`,  `Ellie`,  `Kotetsu&Maya / Jing`,  `Kotetsu&Maya / Jing`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `E L Y N N Δ L V N S T 又`,  `Catcraft`,  `idis`,  `idis`,  `idis`,  `Saki`,  `Catcraft`,  `Catcraft`,  `Catcraft`,  `Saki`,  `Saki`,  `Saki`,  `idis`,  `idis`,  `idis`,  `idis`,  `haruhi`,  `Lily Aria`,  `Azzie`,  `Adra` ];
+  window.tweetsSize = [`true`,  `true`,  `true`,  `true`,  ``,  ``,  `true`,  ``,  ``,  ``,  ``,  ``,  ``,  `true`,  ``,  ``,  `true`,  ``,  ``,  `true`,  ``,  ``,  `true`,  ``,  ``,  `true`,  `true`,  ``,  `true`,  ``,  `true`,  ``,  ``,  ``,  `true`,  `true`,  ``,  `true`,  ``,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  ``,  ``,  `true`,  `true`,  `true`,  `true`,  ``,  `true`,  `true`,  `true`,  ``,  ``,  `true`,  ``,  ``,  ``,  ``,  ``,  ``,  ``,  ``,  `true`,  ``,  `true`,  `true`,  `true`,  ``,  ``,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  `true`,  ``,  `true`,  ``,  `true`,  `true`,  `true`,  `true`,  ``,  ``,  ``,  `true`,  `true`,  `true`,  ``,  ``,  ``,  `true`,  ``,  ``,  ``,  `` ];
+  window.tweetsProfile = [`https://twitter.com/catcraftxiv/status/1785812945324196129`,  `https://twitter.com/milkchanbread/status/1785819400282771534`,  `https://twitter.com/Ellieffxiv/status/1786081971258679472`,  `https://twitter.com/MSaltedcaramel/status/1786669191208341917`,  `https://twitter.com/sebastardd69`,  `https://twitter.com/sebastardd69`,  `/web`,  `https://twitter.com/catcraftxiv/status/1788683093810786649`,  `https://twitter.com/catcraftxiv/status/1788738232546369859`,  `https://twitter.com/catcraftxiv/status/1788738294013923482`,  `https://twitter.com/catcraftxiv/status/1788739364203245636`,  `https://twitter.com/idisxiv/status/1789057976558387428`,  `https://twitter.com/idisxiv/status/1789829849973977338`,  `https://twitter.com/Ellieffxiv/status/1782990617959637318`,  `https://twitter.com/idisxiv/status/1791568689214464260`,  `https://x.com/idisxiv`,  `https://twitter.com/milkchanbread/status/1791820717857911121`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv`,  `https://twitter.com/catcraftxiv/`,  `https://twitter.com/catcraftxiv/`,  `https://x.com/Ellieffxiv/status/1800949090026652003`,  `https://x.com/catcraftxiv/status/1801373600320262548`,  `https://x.com/catcraftxiv/status/1803182349099700418`,  `https://x.com/catcraftxiv/status/1803183133820440640`,  `https://x.com/Ellieffxiv/status/1806375334130208990`,  `https://x.com/catcraftxiv/status/1815702321441001641`,  `https://x.com/Emblem13235`,  `https://x.com/catcraftxiv`,  `https://x.com/PhotosmithSaki/status/1820799147341156387`,  `https://x.com/catcraftxiv`,  `https://x.com/idisxiv/status/1823415333975204172`,  `https://aetherphoto.carrd.co/`,  `https://www.instagram.com/scyllecirhe.ffxiv/`,  `https://www.instagram.com/scyllecirhe.ffxiv/`,  `https://x.com/idisxiv/`,  `https://x.com/idisxiv/`,  `/web/`,  `https://x.com/PhotosmithSaki/status/1838363657140654110`,  `https://x.com/catcraftxiv`,  `https://x.com/Ellieffxiv`,  `https://x.com/Ellieffxiv`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv/status/1838406531341234413`,  `https://x.com/idisxiv/`,  `https://x.com/solaris_xiv/status/1839463213655794164`,  `https://www.instagram.com/scyllecirhe.ffxiv/`,  `https://x.com/catcraftxiv`,  `https://x.com/yeuxbaelsar/status/1843969671055196391`,  `https://x.com/yeuxbaelsar/status/1843244881806000379`,  `https://x.com/PhotosmithSaki/`,  `https://x.com/PhotosmithSaki/`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6rylq4tyk25`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6pkkfw5qm2r`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6g7xa6f2s2u`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6cy54kma62s`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6artmwqkp2a`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l66iu3rbjw2a`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6xowjah2f2h`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l6nu4nciuy2e`,  `https://x.com/Ellieffxiv`,  `/`,  `/`,  `/`,  `/`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l7bgtchkrt27`,  `/`,  `/`,  `/`,  `https://x.com/idisxiv/`,  `/`,  `https://bsky.app/profile/tsukuyomi.bsky.social/post/3l7hf37v5kt2q`,  `https://x.com/PhotosmithSaki`,  `https://x.com/Ellieffxiv`,  `https://www.instagram.com/kotetsu_ffxiv/`,  `https://www.instagram.com/kotetsu_ffxiv/`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `https://x.com/neongraves_`,  `/`,  `https://x.com/idisxiv/`,  `https://x.com/idisxiv/`,  `https://x.com/idisxiv/`,  `https://x.com/PhotosmithSaki`,  `https://x.com/catcraftxiv`,  `https://x.com/catcraftxiv`,  `https://x.com/catcraftxiv`,  `https://x.com/PhotosmithSaki`,  `https://x.com/PhotosmithSaki`,  `https://x.com/PhotosmithSaki`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv`,  `https://x.com/idisxiv`,  `https://x.com/haruhixiv`,  `/`,  `https://x.com/AzziXiko`,  `https://x.com/yourfav_vierelf` ];
+
+</script>
+
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            <div class="album">
+  <div class="responsive-container-block bg">
+    <script type="text/javascript">
+      var numberOfPosts = 9;
+      var maxRows = 3;
+      var postIndices = Array.from(window.tweetsEmbed.keys());
+
+      function getTweetHtml(src, author, isBigImage, link) {
+        return `<div class="photoCard">
+								  <img class="img ${isBigImage ? 'img-big' : ''}" src="${src}" alt="by ${author}">
+								  <div class="photoCardText">
+									<a href="${link}" style="color: black; text-decoration: none;" target="_blank">by ${author}</a>
+								  </div>
+								</div>`;
+      }
+
+      function getNewRandomPostIndex(needSmall) {
+        var i = Math.floor(Math.random() * postIndices.length);
+        var index = postIndices[i]
+        console.log(postIndices, i);
+
+        if (needSmall) {
+          const tweet = getTweetData(index);
+          if (tweet.isBigImage) {
+            return getNewRandomPostIndex(needSmall);
+          }
+        }
+
+        postIndices.splice(i, 1);
+        return index;
+      }
+
+      function getTweetData(index) {
+        var image = window.tweetsEmbed[index];
+        var author = window.tweetsName[index];
+        var isBigImage = window.tweetsSize[index];
+        var link = window.tweetsProfile[index];
+
+        return { image, author, isBigImage, link };
+      }
+
+      var rowsInColumn = 0;
+
+      for (let column = 0; column < numberOfPosts / maxRows; column++) {
+        document.write('<div class="responsive-container-block img-cont">');
+
+        for (let row = 0; row < maxRows; row++) {
+          const needSmall = rowsInColumn >= maxRows - 1;
+          var randomIndex = getNewRandomPostIndex(needSmall);
+
+          if (rowsInColumn >= maxRows) {
+            rowsInColumn = 0;
+          }
+
+          const { image, link, isBigImage, author } = getTweetData(randomIndex);
+
+          rowsInColumn += isBigImage ? 2 : 1;
+
+          document.write(getTweetHtml(image, author, isBigImage, link));
+
+          if (isBigImage) {
+            row++;
+          }
+        }
+
+        document.write('</div>');
+      }
+    </script>
+  </div>
+        </div>
+
+<script src="https://giscus.app/client.js"
+        data-repo="catcraftxiv/catcraftxiv.github.io"
+        data-repo-id="R_kgDOM7-w3w"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOM7-w384CmI5I"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+	
+	</div>
+</main>
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">Catcraft!</a></section>
+                <section class="poweredby">Published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a>. Catcraft is not affiliated in any way with SQUARE ENIX CO., LTD. </section>
+                <nav class="site-footer-nav">
+                    <!-- <a href="https://discord.gg/yPbUXazxQ3" target="_blank">Discord</a> -->
+                    
+                    <!-- <a href="https://twitter.com/catcraftxiv" target="_blank" rel="noopener">Twitter</a> -->
+                    <!-- <a href="https://bsky.app/profile/catcraftxiv.bsky.social" target="_blank" rel="noopener">Bsky</a> -->
+					<a href="/about/">About</a>
+					<a href="/rules/">Mod Rules</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Catcraft!" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Catcraft!</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
