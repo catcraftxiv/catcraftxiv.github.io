@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://catcraftxiv.github.io/web/assets/img/avatar.jpg" type="image/x-icon" />
+        <!-- Custom icons import -->
+        <link rel="stylesheet" href="/./assets/style.css">
     <title>{{ page.title }}</title>
 
     <!-- MathJax for LaTeX support -->
@@ -12,12 +14,19 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+
+:root {
+    --backgroundColor: #28272f;
+    --fontColor: #e5d6c4;
+    --accentColor: #da9445;
+}
+
         body {
             font-family: 'Linux Libertine O', serif;
             line-height: 1.6;
-            color: #e0e0e0;
+            color: var(--fontColor);
             font-size: 1.2em;
-            background-color: #1a1a1a;
+            background-color: var(--backgroundColor);
             margin: 0;
             padding: 0;
         }
@@ -26,7 +35,28 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            overflow: hidden;
         }
+
+        .container img,
+.container video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 0 0.5em 0;
+}
+
+.container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Optional: To ensure proper spacing around media */
+.container img + br,
+.container video + br {
+    display: none;
+}
 
         header {
             text-align: center;
@@ -36,13 +66,11 @@
         }
 
         h1 {
-            color: #fff;
             font-size: 3.5em;
             margin-bottom: 10px;
         }
 
         h2 {
-            color: #ccc;
             border-bottom: 1px solid #333;
             padding-bottom: 5px;
             margin: 30px 0;
@@ -51,6 +79,12 @@
 
         p {
             margin: 15px 0;
+        }
+
+        .container blockquote {
+            margin: -1em 0 1.5em;
+    padding: 0 1.5em;
+    border-left: 3px solid var(--accentColor);
         }
 
         /* Dropcap Effect */
@@ -64,14 +98,13 @@
 
         /* Make links match the text color */
         a {
-            color: #e0e0e0;
-            border-bottom: 1px solid #333;
             transition: all 0.3s ease;
+            color:var(--accentColor);
+            text-decoration: none;
         }
 
         a:hover {
             color: #ccc;
-            border-bottom-color: #e0e0e0;
         }
 
         code {
@@ -88,6 +121,14 @@
             background-color: #2d2d2d;
             border-radius: 5px;
         }
+
+        footer {
+            margin: 0 auto;
+            padding: 1em 0 3em 0;
+    overflow: hidden;
+    display: block;
+    width: fit-content;
+        }
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine+O:wght@400;700&display=swap" rel="stylesheet">
@@ -99,9 +140,8 @@
             <h1>{{ page.title }}</h1>
             <p>{{ page.subtitle }}</p>
         </header>
-
         {{ content }}
     </div>
+    <footer><p>{{ page.date | date: "%Y" }}</p></footer>
 </body>
-
 </html>

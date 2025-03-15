@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon-catcraft';
-  src:  url('fonts/icomoon-catcraft.eot?bb1unb');
-  src:  url('fonts/icomoon-catcraft.eot?bb1unb#iefix') format('embedded-opentype'),
-    url('fonts/icomoon-catcraft.ttf?bb1unb') format('truetype'),
-    url('fonts/icomoon-catcraft.woff?bb1unb') format('woff'),
-    url('fonts/icomoon-catcraft.svg?bb1unb#icomoon-catcraft') format('svg');
+  src:  url('fonts/icomoon-catcraft.eot?dvztq9');
+  src:  url('fonts/icomoon-catcraft.eot?dvztq9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-catcraft.ttf?dvztq9') format('truetype'),
+    url('fonts/icomoon-catcraft.woff?dvztq9') format('woff'),
+    url('fonts/icomoon-catcraft.svg?dvztq9#icomoon-catcraft') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ccicon-deco1right:before {
+  content: "\e906";
+}
+.ccicon-deco1left:before {
+  content: "\e907";
+}
+.ccicon-deco2right:before {
+  content: "\e908";
+}
+.ccicon-deco2left:before {
+  content: "\e909";
+}
 .ccicon-catcraft:before {
   content: "\e900";
 }
