@@ -3,7 +3,7 @@ layout: default
 title: Short & Sweet
 subtitle: Cute and Puffy
 date: 2025-02-27 17:11:00 +0300
-permalink: /catalogue/:title
+permalink: /catalogue/:title/
 ---
 
 Cute crop hoodie with shorts!
