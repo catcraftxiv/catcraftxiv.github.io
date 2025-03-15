@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-@font-face {
-    font-family: "icomoon";
-    src: url("../fonts/icomoon.eot?2ljhe1");
-    src: url("../fonts/icomoon.eot?2ljhe1#iefix") format("embedded-opentype"),
-      url("../fonts/icomoon.woff?2ljhe1") format("woff"),
-      url("../fonts/icomoon.ttf?2ljhe1") format("truetype"),
-      url("../fonts/icomoon.svg?2ljhe1#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
+@import url('/assets/style.css');
 
 :root {
     --bgColor: #223344;
