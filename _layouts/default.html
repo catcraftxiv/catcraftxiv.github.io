@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://catcraftxiv.github.io/web/assets/img/avatar.jpg" type="image/x-icon" />
-        <!-- Custom icons import -->
-        <link rel="stylesheet" href="/./assets/style.css">
+    <!-- Custom icons import -->
+    <link rel="stylesheet" href="/./assets/style.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine+O:wght@400;700&display=swap" rel="stylesheet">
     <title>{{ page.title }}</title>
-
     <!-- MathJax for LaTeX support -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <!-- Styles -->
     <style>
-
-:root {
-    --backgroundColor: #28272f;
-    --fontColor: #e5d6c4;
-    --accentColor: #da9445;
-}
+        :root {
+            --backgroundColor: #28272f;
+            --fontColor: #e5d6c4;
+            --accentColor: #da9445;
+        }
 
         body {
             font-family: 'Linux Libertine O', serif;
@@ -39,24 +39,24 @@
         }
 
         .container img,
-.container video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 0 0.5em 0;
-}
+        .container video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 0 0.5em 0;
+        }
 
-.container video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+        .container video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-/* Optional: To ensure proper spacing around media */
-.container img + br,
-.container video + br {
-    display: none;
-}
+        /* Optional: To ensure proper spacing around media */
+        .container img+br,
+        .container video+br {
+            display: none;
+        }
 
         header {
             text-align: center;
@@ -83,8 +83,8 @@
 
         .container blockquote {
             margin: -1em 0 1.5em;
-    padding: 0 1.5em;
-    border-left: 3px solid var(--accentColor);
+            padding: 0 1.5em;
+            border-left: 3px solid var(--accentColor);
         }
 
         /* Dropcap Effect */
@@ -99,7 +99,7 @@
         /* Make links match the text color */
         a {
             transition: all 0.3s ease;
-            color:var(--accentColor);
+            color: var(--accentColor);
             text-decoration: none;
         }
 
@@ -125,13 +125,11 @@
         footer {
             margin: 0 auto;
             padding: 1em 0 3em 0;
-    overflow: hidden;
-    display: block;
-    width: fit-content;
+            overflow: hidden;
+            display: block;
+            width: fit-content;
         }
     </style>
-
-    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine+O:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -142,6 +140,10 @@
         </header>
         {{ content }}
     </div>
-    <footer><p>{{ page.date | date: "%Y" }}</p></footer>
+    <footer>
+        <p>
+            {{ page.date | date: "%Y" }}
+        </p>
+    </footer>
 </body>
 </html>
