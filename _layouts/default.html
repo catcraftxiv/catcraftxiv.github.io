@@ -44,12 +44,19 @@
             height: auto;
             display: block;
             margin: 0 0 0.5em 0;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .container video {
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+
+        details {
+            cursor: pointer;
+            color: var(--accentColor)
         }
 
         /* Optional: To ensure proper spacing around media */
@@ -139,6 +146,7 @@
             <p>{{ page.subtitle }}</p>
         </header>
         {{ content }}
+        {% include post-gallery.html %}
     </div>
     <footer>
         <p>
@@ -146,4 +154,5 @@
         </p>
     </footer>
 </body>
+
 </html>

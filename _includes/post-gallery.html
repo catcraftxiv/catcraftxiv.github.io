@@ -1,0 +1,39 @@
+<!-- credits: https://talk.jekyllrb.com/t/about-generating-responsive-image-gallery-from-any-folder/3196 -->
+<div class="gallery">
+    {% assign images = site.static_files | where: "path", image_folder %}
+    
+    {% if images %}
+        {% assign folder_name = page.url | split: '/' | last | remove_last: '/' %}
+        {% if folder_name %}
+            {% assign image_folder = "/assets/images/" | append: folder_name | append: "/" %}
+            
+            <!-- First, embed iframes from .html files in folder -->
+            {% for file in site.static_files %}
+                {% if file.path contains image_folder %}
+                    {% if file.extname == '.html' or 
+                          file.extname == '.HTML' %}
+                        {% assign filenameparts = file.path | split: "/" %}
+                        {% assign filename = filenameparts | last | replace: ".html","" %}
+                        <iframe src="{{ file.path }}" alt="{{ filename }}" style="width: 800px; height: 800px; border: none; aspect-ratio: 1/1;"></iframe>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <!-- Then, embed images -->
+            {% for file in site.static_files %}
+                {% if file.path contains image_folder %}
+                    {% if file.extname == '.jpg' or 
+                          file.extname == '.jpeg' or 
+                          file.extname == '.JPG' or 
+                          file.extname == '.png' or 
+                          file.extname == '.PNG' or 
+                          file.extname == '.JPEG' %}
+                        {% assign filenameparts = file.path | split: "/" %}
+                        {% assign filename = filenameparts | last | replace: file.extname,"" %}
+                        <img src="{{ file.path }}" alt="{{ filename }}">
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+</div>
