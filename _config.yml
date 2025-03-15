@@ -2,7 +2,7 @@ title: Catcraft
 description: FFXIV mods
 theme: minima
 url: https://catcraftxiv.github.io/
-baseurl: "/"
+baseurl: ""
 
 markdown: kramdown
 highlighter: rouge
