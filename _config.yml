@@ -13,3 +13,4 @@ permalink: /:title.html
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
