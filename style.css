@@ -14,6 +14,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
+    background-color: var(--bgColor);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
     background-image: linear-gradient( var(--backgroundFilter), var(--backgroundFilter)), url('assets/background.jpg');
     background-position: center;
@@ -23,7 +24,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
 }
 
 #profilePicture, #profilePicture img {
