@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- MathJax for LaTeX support -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Linux Libertine O', serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 1.2em;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            /* border-bottom: 1px solid #333; */
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #ccc;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin: 30px 0;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        /* Dropcap Effect */
+        /*
+        .container>p:first-of-type:first-letter {
+            -webkit-initial-letter: 4;
+            initial-letter: 4;
+            font-size: 40px;
+        }
+        */
+
+        /* Make links match the text color */
+        a {
+            color: #e0e0e0;
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ccc;
+            border-bottom-color: #e0e0e0;
+        }
+
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .mathjax {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #2d2d2d;
+            border-radius: 5px;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine+O:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.subtitle }}</p>
+        </header>
+
+        {{ content }}
+    </div>
+</body>
+
+</html>

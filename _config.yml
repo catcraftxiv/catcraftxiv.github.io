@@ -1,0 +1,15 @@
+title: Catcraft
+description: FFXIV mods
+theme: minima
+url: https://catcraftxiv.github.io/
+baseurl: "/"
+
+markdown: kramdown
+highlighter: rouge
+mathjax: true
+
+permalink: /:title.html
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
