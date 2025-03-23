@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown Editor</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0f1218;
+      --bg-medium: #1a1d24;
+      --bg-light: #21262e;
+      --text-main: #f0f3f6;
+      --text-muted: #9da5b4;
+      --accent: #f0b132;
+      --link-color: #f0b132;
+      --bg-light-mode: #f4f4f4;
+      --text-light-main: #1a1a1a;
+      --text-light-muted: #4b4b4b;
+      --light-output-bg: #fbfbfb;
+      --light-editor-bg: #eeeeee;
+      --light-header-bg: #e5e5e5;
+      --light-link-color: #d18700;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background: var(--bg-light-mode);
+      color: var(--text-light-main);
+    }
+
+    body.light textarea {
+      background: var(--light-editor-bg);
+      color: var(--text-light-main);
+    }
+
+    body.light .container > .output {
+      background: var(--light-output-bg);
+      color: var(--text-light-main);
+    }
+
+    body.light .header {
+      background: var(--light-header-bg);
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light button {
+      background: #e0e0e0;
+      color: #1a1a1a;
+      border-color: #bbb;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background: var(--bg-medium);
+      border-bottom: 1px solid #2d333b;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .header-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      font-weight: bold;
+      color: var(--text-main);
+    }
+
+    body.light .header-title {
+      color: var(--text-light-main);
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    button {
+      background: var(--bg-light);
+      color: var(--text-main);
+      border: 1px solid #30363d;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #3a3f4b;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    body.light button:hover {
+      background: #d7d7d7;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    textarea {
+      width: 50%;
+      height: 100%;
+      border: none;
+      padding: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      background: var(--bg-medium);
+      color: var(--text-main);
+      resize: none;
+      white-space: pre-wrap;
+    }
+
+    .container > .output {
+      flex: 1;
+      display: none;
+      padding: 20px;
+      background: var(--bg-dark);
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    #preview.show,
+    #converted.show,
+    #patreon.show,
+    #boosty.show {
+      display: block;
+    }
+
+    #preview, #patreon, #boosty {
+      white-space: normal;
+    }
+
+    #converted {
+      white-space: pre-wrap;
+    }
+
+    #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview h6,
+    #patreon h1, #patreon h2, #patreon h3, #patreon h4, #patreon h5, #patreon h6,
+    #boosty h1, #boosty h2, #boosty h3, #boosty h4, #boosty h5, #boosty h6 {
+      color: var(--text-main);
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    body.light #preview h1,
+    body.light #preview h2,
+    body.light #preview h3,
+    body.light #preview h4,
+    body.light #preview h5,
+    body.light #preview h6,
+    body.light #patreon h1,
+    body.light #patreon h2,
+    body.light #patreon h3,
+    body.light #patreon h4,
+    body.light #patreon h5,
+    body.light #patreon h6,
+    body.light #boosty h1,
+    body.light #boosty h2,
+    body.light #boosty h3,
+    body.light #boosty h4,
+    body.light #boosty h5,
+    body.light #boosty h6 {
+      color: var(--text-light-main);
+    }
+
+    #preview em, #patreon em, #boosty em {
+      color: var(--text-muted);
+    }
+
+    body.light #preview em, body.light #patreon em, body.light #boosty em {
+      color: var(--text-light-muted);
+    }
+
+    #preview strong, #patreon strong, #boosty strong {
+      color: var(--text-main);
+    }
+
+    body.light #preview strong, body.light #patreon strong, body.light #boosty strong {
+      color: var(--text-light-main);
+    }
+
+    #preview a, #patreon a, #boosty a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    body.light #preview a, body.light #patreon a, body.light #boosty a {
+      color: var(--light-link-color);
+    }
+
+    #preview a:hover, #patreon a:hover, #boosty a:hover {
+      text-decoration: underline;
+    }
+
+    #preview ul, #patreon ul, #boosty ul {
+      padding-left: 20px;
+    }
+
+    #preview li, #patreon li, #boosty li {
+      margin-bottom: 0.4em;
+    }
+
+    #preview blockquote, #patreon blockquote, #boosty blockquote {
+      border-left: 4px solid var(--text-muted);
+      padding-left: 16px;
+      margin: 1em 0;
+      color: var(--text-muted);
+    }
+
+    body.light #preview blockquote, body.light #patreon blockquote, body.light #boosty blockquote {
+      border-color: var(--text-light-muted);
+      color: var(--text-light-muted);
+    }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-title">Markdown Editor</div>
+    <div class="buttons">
+      <button id="previewBtn">Markdown</button>
+      <button id="convertBtn">to Discord</button>
+      <button id="patreonBtn">to Patreon</button>
+      <button id="boostyBtn">to Boosty</button>
+      <!-- <button id="copyBtn">📜</button> -->
+      <button id="themeToggle">🌗</button>
+    </div>
+  </div>
+  <div class="container">
+    <textarea id="markdown" placeholder="Введите Markdown..."></textarea>
+    <div id="preview" class="output show"></div>
+    <div id="converted" class="output"></div>
+    <div id="patreon" class="output"></div>
+    <div id="boosty" class="output"></div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const markdownInput = document.getElementById("markdown");
+      const previewOutput = document.getElementById("preview");
+      const convertedOutput = document.getElementById("converted");
+      const patreonOutput = document.getElementById("patreon");
+      const boostyOutput = document.getElementById("boosty");
+      const previewBtn = document.getElementById("previewBtn");
+      const convertBtn = document.getElementById("convertBtn");
+      const patreonBtn = document.getElementById("patreonBtn");
+      const boostyBtn = document.getElementById("boostyBtn");
+      const copyBtn = document.getElementById("copyBtn");
+      const themeToggle = document.getElementById("themeToggle");
+
+      const savedText = localStorage.getItem("markdownText");
+      if (savedText) markdownInput.value = savedText;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") document.body.classList.add("light");
+
+      function updatePreview() {
+        previewOutput.innerHTML = marked.parse(markdownInput.value);
+      }
+
+      function convertMarkdown() {
+  let text = markdownInput.value;
+
+  // Удаляем комментарии
+  text = text.replace(/^[\[\]\/]?: # \(.*?\)\s*$/gm, "");
+
+  let links = {};
+  // Сохраняем определения ссылок
+  text = text.replace(/^\[(.*?)\]:\s*(.*)$/gm, (match, name, url) => {
+    links[name] = url;
+    return "";
+  });
+
+  // Преобразуем ссылки в формат [name](<url>)
+  text = text.replace(/\[(.*?)\]/g, (match, name) => {
+    return links[name] ? `[${name}](<${links[name]}>)` : match;
+  });
+
+  const safeText = text
+    .trim()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  convertedOutput.innerHTML = safeText.replace(/\n/g, "<br>");
+}
+
+      function updatePatreon() {
+  let content = markdownInput.value;
+  content = content
+    .split("\n")
+    .filter(
+      (line) =>
+        !/^>\s*\*Get the mod at \[patreon\].*$/i.test(line) &&
+        !/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line) &&
+        !/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)
+    )
+    .join("\n");
+  patreonOutput.innerHTML = marked.parse(content);
+}
+
+
+function updateBoosty() {
+  let content = markdownInput.value;
+  const divider = "──────────────────────────────── • ✤ • ────────────────────────────────";
+  const lines = content.split("\n");
+  const result = [];
+  const linkDefinitions = [];
+
+  let skip = false;
+  for (let line of lines) {
+    if (/^>\s*\*Get the mod at \[patreon\].*$/i.test(line)) continue;
+    if (/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line)) continue;
+    if (/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)) continue;
+    if (/^\[\/\/\]:\s?#\s?\(Comments & links:\)/i.test(line.trim())) {
+      skip = true;
+      continue;
+    }
+
+    if (skip) {
+      if (/^\[.*?\]:\s*https?:\/\//.test(line.trim())) {
+        linkDefinitions.push(line.trim());
+      }
+      continue;
+    }
+
+    if (line.trim() === "") {
+      result.push(divider);
+    } else {
+      result.push(line.replace(/^\s*-\s+/, "✦ "));
+    }
+  }
+
+  const cleaned = [];
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] === divider && cleaned[cleaned.length - 1] === divider) {
+      continue;
+    }
+    cleaned.push(result[i]);
+  }
+
+  if (cleaned[0] === divider) cleaned.shift();
+  if (cleaned[cleaned.length - 1] === divider) cleaned.pop();
+
+  let finalContent = cleaned.join("\n\n");
+  if (linkDefinitions.length > 0) {
+    finalContent += "\n\n" + linkDefinitions.join("\n");
+  }
+
+  console.log("Boosty FINAL:\n", finalContent);
+  boostyOutput.innerHTML = marked.parse(finalContent);
+}
+
+
+      function copyOutputToClipboard() {
+  const activeOutput = document.querySelector('.output.show');
+  if (!activeOutput) return;
+
+  const htmlContent = activeOutput.innerHTML;
+  const temp = document.createElement("div");
+  temp.innerHTML = htmlContent;
+
+  const selection = window.getSelection();
+  const range = document.createRange();
+  range.selectNodeContents(temp);
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  try {
+    // Используем Clipboard API, если поддерживается
+    navigator.clipboard.write([
+      new ClipboardItem({
+        "text/html": new Blob([htmlContent], { type: "text/html" }),
+        "text/plain": new Blob([temp.innerText], { type: "text/plain" })
+      })
+    ]);
+  } catch (err) {
+    // Фолбэк для старых браузеров
+    document.body.appendChild(temp);
+    temp.contentEditable = true;
+    temp.style.position = 'fixed';
+    temp.style.left = '-9999px';
+    temp.focus();
+    document.execCommand("selectAll");
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+  }
+
+  // Уведомление
+  const notification = document.createElement("div");
+  notification.textContent = "✅ Copied to clipboard!";
+  notification.style.position = "fixed";
+  notification.style.bottom = "20px";
+  notification.style.right = "20px";
+  notification.style.padding = "10px 20px";
+  notification.style.background = "#333";
+  notification.style.color = "#fff";
+  notification.style.borderRadius = "6px";
+  notification.style.fontSize = "14px";
+  notification.style.opacity = "0.9";
+  notification.style.zIndex = "1000";
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    document.body.removeChild(notification);
+  }, 2000);
+}
+
+
+      markdownInput.addEventListener("input", () => {
+        localStorage.setItem("markdownText", markdownInput.value);
+        updatePreview();
+        convertMarkdown();
+        updatePatreon();
+        updateBoosty();
+      });
+
+      previewBtn.addEventListener("click", () => {
+        previewOutput.classList.add("show");
+        convertedOutput.classList.remove("show");
+        patreonOutput.classList.remove("show");
+        boostyOutput.classList.remove("show");
+        updatePreview();
+      });
+
+      convertBtn.addEventListener("click", () => {
+        convertedOutput.classList.add("show");
+        previewOutput.classList.remove("show");
+        patreonOutput.classList.remove("show");
+        boostyOutput.classList.remove("show");
+        convertMarkdown();
+      });
+
+      patreonBtn.addEventListener("click", () => {
+        patreonOutput.classList.add("show");
+        previewOutput.classList.remove("show");
+        convertedOutput.classList.remove("show");
+        boostyOutput.classList.remove("show");
+        updatePatreon();
+      });
+
+      boostyBtn.addEventListener("click", () => {
+        boostyOutput.classList.add("show");
+        previewOutput.classList.remove("show");
+        convertedOutput.classList.remove("show");
+        patreonOutput.classList.remove("show");
+        updateBoosty();
+      });
+
+      copyBtn.addEventListener("click", copyOutputToClipboard);
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+        const theme = document.body.classList.contains("light") ? "light" : "dark";
+        localStorage.setItem("theme", theme);
+      });
+
+      updatePreview();
+      convertMarkdown();
+      updatePatreon();
+      updateBoosty();
+    });
+  </script>
+</body>
+</html>
