@@ -21,7 +21,7 @@ I hope you will like it!!! 🌺🌺🌺
 
 Feel free to use #catcraftxiv tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [idis] and [Lehlei] for previews!! <3 Sorry, I couldn't embed [NSFW previews] here!
+Thank you [idis], [Saki], [Lehlei] and [Azzi] for previews!! <3 Sorry, I couldn't embed [NSFW previews] here!
 
 [//]: # (Comments & links:)
 
