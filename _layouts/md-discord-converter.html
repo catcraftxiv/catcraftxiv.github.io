@@ -465,7 +465,10 @@ function updateBoosty() {
         updateBoosty();
       });
 
-      copyBtn.addEventListener("click", copyOutputToClipboard);
+      if (copyBtn) {
+  copyBtn.addEventListener("click", copyOutputToClipboard);
+}
+
 
       themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("light");
