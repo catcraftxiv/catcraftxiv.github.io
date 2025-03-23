@@ -231,6 +231,15 @@
       border-color: var(--text-light-muted);
       color: var(--text-light-muted);
     }
+
+    .output[contenteditable="true"] {
+  user-select: text;
+}
+
+.output[contenteditable="true"]:focus {
+  outline: none;
+}
+
 </style>
 </head>
 <body>
@@ -247,10 +256,10 @@
   </div>
   <div class="container">
     <textarea id="markdown" placeholder="Введите Markdown..."></textarea>
-    <div id="preview" class="output show"></div>
-    <div id="converted" class="output"></div>
-    <div id="patreon" class="output"></div>
-    <div id="boosty" class="output"></div>
+    <div id="preview" class="output show" tabindex="0" contenteditable="true" spellcheck="false"></div>
+    <div id="converted" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
+    <div id="patreon" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
+    <div id="boosty" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -265,166 +274,150 @@
       const boostyBtn = document.getElementById("boostyBtn");
       const copyBtn = document.getElementById("copyBtn");
       const themeToggle = document.getElementById("themeToggle");
-
+  
       const savedText = localStorage.getItem("markdownText");
       if (savedText) markdownInput.value = savedText;
-
+  
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme === "light") document.body.classList.add("light");
-
+  
       function updatePreview() {
         previewOutput.innerHTML = marked.parse(markdownInput.value);
       }
-
+  
       function convertMarkdown() {
-  let text = markdownInput.value;
-
-  // Удаляем комментарии
-  text = text.replace(/^[\[\]\/]?: # \(.*?\)\s*$/gm, "");
-
-  let links = {};
-  // Сохраняем определения ссылок
-  text = text.replace(/^\[(.*?)\]:\s*(.*)$/gm, (match, name, url) => {
-    links[name] = url;
-    return "";
-  });
-
-  // Преобразуем ссылки в формат [name](<url>)
-  text = text.replace(/\[(.*?)\]/g, (match, name) => {
-    return links[name] ? `[${name}](<${links[name]}>)` : match;
-  });
-
-  const safeText = text
-    .trim()
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-
-  convertedOutput.innerHTML = safeText.replace(/\n/g, "<br>");
-}
-
-      function updatePatreon() {
-  let content = markdownInput.value;
-  content = content
-    .split("\n")
-    .filter(
-      (line) =>
-        !/^>\s*\*Get the mod at \[patreon\].*$/i.test(line) &&
-        !/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line) &&
-        !/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)
-    )
-    .join("\n");
-  patreonOutput.innerHTML = marked.parse(content);
-}
-
-
-function updateBoosty() {
-  let content = markdownInput.value;
-  const divider = "──────────────────────────────── • ✤ • ────────────────────────────────";
-  const lines = content.split("\n");
-  const result = [];
-  const linkDefinitions = [];
-
-  let skip = false;
-  for (let line of lines) {
-    if (/^>\s*\*Get the mod at \[patreon\].*$/i.test(line)) continue;
-    if (/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line)) continue;
-    if (/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)) continue;
-    if (/^\[\/\/\]:\s?#\s?\(Comments & links:\)/i.test(line.trim())) {
-      skip = true;
-      continue;
-    }
-
-    if (skip) {
-      if (/^\[.*?\]:\s*https?:\/\//.test(line.trim())) {
-        linkDefinitions.push(line.trim());
+        let text = markdownInput.value;
+        text = text.replace(/^[\[\]\/]?: # \(.*?\)\s*$/gm, "");
+        let links = {};
+        text = text.replace(/^\[(.*?)\]:\s*(.*)$/gm, (match, name, url) => {
+          links[name] = url;
+          return "";
+        });
+        text = text.replace(/\[(.*?)\]/g, (match, name) => {
+          return links[name] ? `[${name}](<${links[name]}>)` : match;
+        });
+        const safeText = text
+          .trim()
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+        convertedOutput.innerHTML = safeText.replace(/\n/g, "<br>");
       }
-      continue;
-    }
-
-    if (line.trim() === "") {
-      result.push(divider);
-    } else {
-      result.push(line.replace(/^\s*-\s+/, "✦ "));
-    }
-  }
-
-  const cleaned = [];
-  for (let i = 0; i < result.length; i++) {
-    if (result[i] === divider && cleaned[cleaned.length - 1] === divider) {
-      continue;
-    }
-    cleaned.push(result[i]);
-  }
-
-  if (cleaned[0] === divider) cleaned.shift();
-  if (cleaned[cleaned.length - 1] === divider) cleaned.pop();
-
-  let finalContent = cleaned.join("\n\n");
-  if (linkDefinitions.length > 0) {
-    finalContent += "\n\n" + linkDefinitions.join("\n");
-  }
-
-  console.log("Boosty FINAL:\n", finalContent);
-  boostyOutput.innerHTML = marked.parse(finalContent);
-}
-
-
+  
+      function updatePatreon() {
+        let content = markdownInput.value;
+        content = content
+          .split("\n")
+          .filter(
+            (line) =>
+              !/^>\s*\*Get the mod at \[patreon\].*$/i.test(line) &&
+              !/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line) &&
+              !/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)
+          )
+          .join("\n");
+        patreonOutput.innerHTML = marked.parse(content);
+      }
+  
+      function updateBoosty() {
+        let content = markdownInput.value;
+        const divider = "──────────────────────────────── • ✤ • ────────────────────────────────";
+        const lines = content.split("\n");
+        const result = [];
+        const linkDefinitions = [];
+  
+        let skip = false;
+        for (let line of lines) {
+          if (/^>\s*\*Get the mod at \[patreon\].*$/i.test(line)) continue;
+          if (/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line)) continue;
+          if (/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)) continue;
+          if (/^\[\/\/\]:\s?#\s?\(Comments & links:\)/i.test(line.trim())) {
+            skip = true;
+            continue;
+          }
+  
+          if (skip) {
+            if (/^\[.*?\]:\s*https?:\/\//.test(line.trim())) {
+              linkDefinitions.push(line.trim());
+            }
+            continue;
+          }
+  
+          if (line.trim() === "") {
+            result.push(divider);
+          } else {
+            result.push(line.replace(/^\s*-\s+/, "✦ "));
+          }
+        }
+  
+        const cleaned = [];
+        for (let i = 0; i < result.length; i++) {
+          if (result[i] === divider && cleaned[cleaned.length - 1] === divider) continue;
+          cleaned.push(result[i]);
+        }
+  
+        if (cleaned[0] === divider) cleaned.shift();
+        if (cleaned[cleaned.length - 1] === divider) cleaned.pop();
+  
+        let finalContent = cleaned.join("\n\n");
+        if (linkDefinitions.length > 0) {
+          finalContent += "\n\n" + linkDefinitions.join("\n");
+        }
+  
+        console.log("Boosty FINAL:\n", finalContent);
+        boostyOutput.innerHTML = marked.parse(finalContent);
+      }
+  
       function copyOutputToClipboard() {
-  const activeOutput = document.querySelector('.output.show');
-  if (!activeOutput) return;
-
-  const htmlContent = activeOutput.innerHTML;
-  const temp = document.createElement("div");
-  temp.innerHTML = htmlContent;
-
-  const selection = window.getSelection();
-  const range = document.createRange();
-  range.selectNodeContents(temp);
-  selection.removeAllRanges();
-  selection.addRange(range);
-
-  try {
-    // Используем Clipboard API, если поддерживается
-    navigator.clipboard.write([
-      new ClipboardItem({
-        "text/html": new Blob([htmlContent], { type: "text/html" }),
-        "text/plain": new Blob([temp.innerText], { type: "text/plain" })
-      })
-    ]);
-  } catch (err) {
-    // Фолбэк для старых браузеров
-    document.body.appendChild(temp);
-    temp.contentEditable = true;
-    temp.style.position = 'fixed';
-    temp.style.left = '-9999px';
-    temp.focus();
-    document.execCommand("selectAll");
-    document.execCommand("copy");
-    document.body.removeChild(temp);
-  }
-
-  // Уведомление
-  const notification = document.createElement("div");
-  notification.textContent = "✅ Copied to clipboard!";
-  notification.style.position = "fixed";
-  notification.style.bottom = "20px";
-  notification.style.right = "20px";
-  notification.style.padding = "10px 20px";
-  notification.style.background = "#333";
-  notification.style.color = "#fff";
-  notification.style.borderRadius = "6px";
-  notification.style.fontSize = "14px";
-  notification.style.opacity = "0.9";
-  notification.style.zIndex = "1000";
-  document.body.appendChild(notification);
-
-  setTimeout(() => {
-    document.body.removeChild(notification);
-  }, 2000);
-}
-
-
+        const activeOutput = document.querySelector('.output.show');
+        if (!activeOutput) return;
+  
+        const htmlContent = activeOutput.innerHTML;
+        const temp = document.createElement("div");
+        temp.innerHTML = htmlContent;
+  
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(temp);
+        selection.removeAllRanges();
+        selection.addRange(range);
+  
+        try {
+          navigator.clipboard.write([
+            new ClipboardItem({
+              "text/html": new Blob([htmlContent], { type: "text/html" }),
+              "text/plain": new Blob([temp.innerText], { type: "text/plain" })
+            })
+          ]);
+        } catch (err) {
+          document.body.appendChild(temp);
+          temp.contentEditable = true;
+          temp.style.position = 'fixed';
+          temp.style.left = '-9999px';
+          temp.focus();
+          document.execCommand("selectAll");
+          document.execCommand("copy");
+          document.body.removeChild(temp);
+        }
+  
+        const notification = document.createElement("div");
+        notification.textContent = "✅ Copied to clipboard!";
+        notification.style.position = "fixed";
+        notification.style.bottom = "20px";
+        notification.style.right = "20px";
+        notification.style.padding = "10px 20px";
+        notification.style.background = "#333";
+        notification.style.color = "#fff";
+        notification.style.borderRadius = "6px";
+        notification.style.fontSize = "14px";
+        notification.style.opacity = "0.9";
+        notification.style.zIndex = "1000";
+        document.body.appendChild(notification);
+  
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 2000);
+      }
+  
       markdownInput.addEventListener("input", () => {
         localStorage.setItem("markdownText", markdownInput.value);
         updatePreview();
@@ -432,7 +425,7 @@ function updateBoosty() {
         updatePatreon();
         updateBoosty();
       });
-
+  
       previewBtn.addEventListener("click", () => {
         previewOutput.classList.add("show");
         convertedOutput.classList.remove("show");
@@ -440,7 +433,7 @@ function updateBoosty() {
         boostyOutput.classList.remove("show");
         updatePreview();
       });
-
+  
       convertBtn.addEventListener("click", () => {
         convertedOutput.classList.add("show");
         previewOutput.classList.remove("show");
@@ -448,7 +441,7 @@ function updateBoosty() {
         boostyOutput.classList.remove("show");
         convertMarkdown();
       });
-
+  
       patreonBtn.addEventListener("click", () => {
         patreonOutput.classList.add("show");
         previewOutput.classList.remove("show");
@@ -456,7 +449,7 @@ function updateBoosty() {
         boostyOutput.classList.remove("show");
         updatePatreon();
       });
-
+  
       boostyBtn.addEventListener("click", () => {
         boostyOutput.classList.add("show");
         previewOutput.classList.remove("show");
@@ -464,23 +457,86 @@ function updateBoosty() {
         patreonOutput.classList.remove("show");
         updateBoosty();
       });
-
+  
       if (copyBtn) {
-  copyBtn.addEventListener("click", copyOutputToClipboard);
-}
-
-
+        copyBtn.addEventListener("click", copyOutputToClipboard);
+      }
+  
       themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("light");
         const theme = document.body.classList.contains("light") ? "light" : "dark";
         localStorage.setItem("theme", theme);
       });
-
+  
+      // Правые окна: фокус + запрет редактирования + двойной клик
+      document.querySelectorAll('.output').forEach(el => {
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('contenteditable', 'true');
+        el.setAttribute('spellcheck', 'false');
+  
+        el.addEventListener('beforeinput', e => e.preventDefault());
+  
+        let clickTimeout = null;
+        let clickCount = 0;
+  
+        el.addEventListener('click', (e) => {
+          el.focus();
+          console.log('Focused on:', el.id);
+  
+          clickCount++;
+          if (clickCount === 2) {
+            console.log(`[${el.id}] Double click detected — selecting content`);
+            e.preventDefault();
+            e.stopPropagation();
+            clickCount = 0;
+  
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(el);
+            selection.removeAllRanges();
+            selection.addRange(range);
+            return;
+          }
+  
+          if (clickTimeout) clearTimeout(clickTimeout);
+  
+          clickTimeout = setTimeout(() => {
+            clickCount = 0;
+          }, 300);
+        });
+      });
+  
+      // Левое окно: двойной клик = выделить всё
+      markdownInput.addEventListener('dblclick', () => {
+        markdownInput.select();
+      });
+  
+      // Ctrl+A для активного правого блока
+      document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') {
+          const active = document.activeElement;
+          const activeOutput = document.querySelector('.output.show');
+  
+          if (active === markdownInput) return;
+  
+          if (activeOutput) {
+            e.preventDefault();
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(activeOutput);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+        }
+      });
+  
+      // Первая отрисовка
       updatePreview();
       convertMarkdown();
       updatePatreon();
       updateBoosty();
     });
   </script>
+  
 </body>
 </html>
