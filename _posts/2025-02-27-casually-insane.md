@@ -15,7 +15,6 @@ Cute crop top with shorts!!
 - Bodies: YAB & Rue S/M/L, WC/SC // Bibo+ M // CCBE+ L
 - Dyeable
 - 4 top print variants, 2 shorts print variants
-- *...see full list of options at right side of [heliosphere] page!*
 
 I hope you will like it!!! 🌺🌺🌺
 

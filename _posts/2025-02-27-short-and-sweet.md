@@ -15,7 +15,6 @@ Cute crop hoodie with shorts :>
 - Bodies: YAB & Rue S/M/L, WC/SC // Bibo+ M // CCBE+ L
 - Dyeable
 - 3 material version
-- *...see full list of options at right side of [heliosphere] page!*
 
 First release for YAB & Rue+ bodies^^ I hope you will like it!!🌺
 
