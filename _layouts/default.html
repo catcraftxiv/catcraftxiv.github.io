@@ -136,15 +136,73 @@
             display: block;
             width: fit-content;
         }
+.page-header {
+  text-align: left;
+  padding: 40px 0 20px;
+  margin-bottom: 40px;
+}
+
+.title-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.title-wrapper h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+.back-triangle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 0;
+  height: 0;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-right: 15px solid var(--accentColor);
+
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.back-triangle:hover {
+  filter: brightness(1.2);
+}
+
+.back-triangle:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+
+.page-header h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+
+
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.subtitle }}</p>
-        </header>
+<header class="page-header">
+<div class="title-wrapper">
+  <a href="/catalogue/" class="back-triangle"></a>
+  <h1>{{ page.title }}</h1>
+</div>
+
+  <p>{{ page.subtitle }}</p>
+</header>
+
+
+
+
         {{ content }}
         {% include post-gallery.html %}
     </div>

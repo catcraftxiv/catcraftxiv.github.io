@@ -55,3 +55,6 @@
 .ccicon-heliosphere:before {
   content: "\e905";
 }
+hr.links {
+  margin: 2.5em;
+}

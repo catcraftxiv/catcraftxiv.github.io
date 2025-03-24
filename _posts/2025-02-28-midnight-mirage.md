@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Midnight Mirage
+subtitle: Short dress with crop sweater
 date: 2025-02-28 22:58:00 +0300
 permalink: /catalogue/:title/
 ---

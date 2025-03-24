@@ -3,6 +3,7 @@ layout: default
 title: Commission Info
 subtitle: ...or just ask me xD
 permalink: commission/
+catalogue: false
 ---
 
 ## Info

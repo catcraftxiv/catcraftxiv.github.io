@@ -7,3 +7,4 @@ gem "kramdown", "~> 2.4.0"
 gem "kramdown-parser-gfm", "~> 1.1.0"
 gem "minima", "~> 2.5.1"
 gem 'jekyll-redirect-from'
+gem 'base64'
