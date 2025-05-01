@@ -29,6 +29,6 @@ I can accept payment through ko-fi/hipolink/boosty! Please, understand that ther
 
 ## Contact
 
-You can write me at discord :> Add me **[pillow39]** or join our [discord server](https://discord.gg/yPbUXazxQ3) and and write me from there!
+You can write me at discord :> Join our [discord server](https://discord.gg/yPbUXazxQ3) and and write me from there! See [#🌸commissions](https://discord.com/channels/1076119248159637534/1076128057678626838) channel
 
 [pillow39]: https://discord.com/users/606138858618224640
