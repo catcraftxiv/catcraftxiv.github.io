@@ -20,7 +20,7 @@ Sorry for being slow lately <:c Don't worry tho, everything will be as it was^^
 
 Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [haruhi], [idis], [yunifer] and [soju] for help with previews!! <3
+Thank you [haruhi], [idis], [yunifer], [Freia] and [soju] for help with previews!! <3
 
 There are 3 more delayed rewards while i was sick that will be released alongside with regular ones!
 
@@ -47,6 +47,7 @@ There are 3 more delayed rewards while i was sick that will be released alongsid
 [Lehlei]: https://x.com/lehlei_xiv
 [soju]: https://x.com/sewerskinky
 [yunifer]: https://x.com/yunixiv
+[Freia]: https://x.com/ForeverFreia
 
 [//]: # (Social profiles:)
 [twitter]: https://x.com/hashtag/catcraftxiv
