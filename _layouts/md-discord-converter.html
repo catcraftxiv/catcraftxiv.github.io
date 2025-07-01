@@ -142,11 +142,12 @@
     #preview.show,
     #converted.show,
     #patreon.show,
-    #boosty.show {
+    #boosty.show,
+	#xma.show {
       display: block;
     }
 
-    #preview, #patreon, #boosty {
+    #preview, #patreon, #boosty, #xma {
       white-space: normal;
     }
 
@@ -246,10 +247,11 @@
   <div class="header">
     <div class="header-title">Markdown Editor</div>
     <div class="buttons">
-      <button id="previewBtn">Markdown</button>
+      <button id="previewBtn">to TGD</button>
       <button id="convertBtn">to Discord</button>
       <button id="patreonBtn">to Patreon</button>
       <button id="boostyBtn">to Boosty</button>
+	  <button id="xmaBtn">to XMA</button>
       <!-- <button id="copyBtn">📜</button> -->
       <button id="themeToggle">🌗</button>
     </div>
@@ -260,6 +262,8 @@
     <div id="converted" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
     <div id="patreon" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
     <div id="boosty" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
+	<div id="xma" class="output" tabindex="0" contenteditable="true" spellcheck="false"></div>
+
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -366,6 +370,84 @@
         console.log("Boosty FINAL:\n", finalContent);
         boostyOutput.innerHTML = marked.parse(finalContent);
       }
+	  
+function updateXMA() {
+  let text = markdownInput.value;
+
+  // Удаляем YAML шапку (--- до ---)
+  text = text.replace(/^---[\s\S]+?---\s*/m, "");
+
+  // Удаляем строку уровня/цены
+  text = text.replace(/^###\s*\d+(?:\.\d+)?\s*USD OR \d+\s*USD TIER\s*$/im, "");
+
+  // Удаляем строку "Get the mod at ..."
+  text = text.replace(/^>\s*\*Get the mod at .*boosty.*public after.*$/gim, "");
+
+  // Удаляем блок комментариев от "[//]: # (Comments & links:)"
+  text = text.split(/\[\/\/\]:\s?#\s?\(Comments & links:\)/)[0];
+
+  // Сохраняем ссылки
+  const linkMap = {};
+  const linkDefRegex = /^\[([^\]]+)\]:\s*(https?:\/\/\S+)/gm;
+  let match;
+  while ((match = linkDefRegex.exec(markdownInput.value)) !== null) {
+    linkMap[match[1]] = match[2];
+  }
+
+  // Заменяем [имя] на имя <url>
+  text = text.replace(/\[([^\]]+)\]/g, (_, name) => {
+    return linkMap[name] ? `${name} <${linkMap[name]}>` : name;
+  });
+
+  // Обрабатываем списки, сохраняя все пустые строки перед ними
+  const lines = text.split('\n');
+  let result = [];
+  let inList = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    if (line.trim().startsWith('-')) {
+      if (!inList && i > 0 && lines[i-1].trim() === '') {
+        // Сохраняем пустую строку перед первым элементом списка
+        result.push('');
+      }
+      inList = true;
+      result.push(line.replace(/^\s*-\s+/, '✦ '));
+    } else {
+      inList = false;
+      result.push(line);
+    }
+  }
+
+  text = result.join('\n');
+
+  // Удаляем лишние пустые строки в начале и конце
+  text = text.trim();
+
+  // Схлопываем более 2 пустых строк → ровно две
+  text = text.replace(/\n{3,}/g, '\n\n');
+
+  // Добавляем блок с ссылками
+  const footer = `
+──────────────────────── • ✤ • ────────────────────────
+
+<:discord:1035231134705000499> Join discord! <https://discord.gg/yPbUXazxQ3>
+<a:pawcraft:1085203495092764682> More links at website! <https://catcraftxiv.github.io/>
+<:Primogem:765129529802752040> See mod rules there! <https://catcraftxiv.github.io/rules>
+`.trim();
+
+  // Собираем финальный текст, гарантируя 2 пустые строки перед футером
+  let finalText = text;
+  if (!text.endsWith('\n\n')) {
+    finalText += '\n\n';
+  }
+  finalText += footer;
+
+  document.getElementById("xma").innerText = finalText;
+}
+
+
   
       function copyOutputToClipboard() {
         const activeOutput = document.querySelector('.output.show');
@@ -424,6 +506,7 @@
         convertMarkdown();
         updatePatreon();
         updateBoosty();
+		updateXMA();
       });
   
       previewBtn.addEventListener("click", () => {
@@ -431,6 +514,7 @@
         convertedOutput.classList.remove("show");
         patreonOutput.classList.remove("show");
         boostyOutput.classList.remove("show");
+		document.getElementById("xma").classList.remove("show");
         updatePreview();
       });
   
@@ -439,6 +523,7 @@
         previewOutput.classList.remove("show");
         patreonOutput.classList.remove("show");
         boostyOutput.classList.remove("show");
+		document.getElementById("xma").classList.remove("show");
         convertMarkdown();
       });
   
@@ -447,6 +532,7 @@
         previewOutput.classList.remove("show");
         convertedOutput.classList.remove("show");
         boostyOutput.classList.remove("show");
+		document.getElementById("xma").classList.remove("show");
         updatePatreon();
       });
   
@@ -455,8 +541,19 @@
         previewOutput.classList.remove("show");
         convertedOutput.classList.remove("show");
         patreonOutput.classList.remove("show");
+		document.getElementById("xma").classList.remove("show");
         updateBoosty();
       });
+	  
+	  xmaBtn.addEventListener("click", () => {
+  document.getElementById("xma").classList.add("show");
+  previewOutput.classList.remove("show");
+  convertedOutput.classList.remove("show");
+  patreonOutput.classList.remove("show");
+  boostyOutput.classList.remove("show");
+  updateXMA();
+});
+
   
       if (copyBtn) {
         copyBtn.addEventListener("click", copyOutputToClipboard);
