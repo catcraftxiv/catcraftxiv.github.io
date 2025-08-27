@@ -1,0 +1,57 @@
+{% if page.tweets and page.tweets.size > 0 %}
+<div id="tweets" class="tweets-enlarged"></div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    function ready(){ return window.twttr && twttr.widgets && typeof twttr.widgets.createTweet==='function'; }
+    function go() {
+      if (!ready()) return setTimeout(go, 50);
+
+      const ids = [{% for id in page.tweets %}'{{ id }}'{% unless forloop.last %},{% endunless %}{% endfor %}];
+      const container = document.getElementById('tweets');
+
+      // желаемый масштаб (влезть по ширине контейнера, но не более 1.6x, чтобы не «распухал»)
+      const baseMax = 550; // базовая макс. ширина твита от X
+      const targetScale = Math.min(container.clientWidth / baseMax, 1.6);
+
+      (async () => {
+        for (const id of ids) {
+          const host = document.createElement('div');
+          host.className = 'tweet-host';
+          container.appendChild(host);
+
+          const el = await twttr.widgets.createTweet(id, host, { theme: 'dark', dnt: true });
+          // el — это iframe твита
+          const scale = Math.max(targetScale, 1); // если контейнер уже узкий — не уменьшаем
+          el.style.transform = 'scale(' + scale + ')';
+          el.style.transformOrigin = 'top left';
+          el.style.width = baseMax + 'px'; // явная базовая ширина
+          el.style.height = el.offsetHeight + 'px'; // чтобы корректно посчиталась высота до масштабирования
+
+          // Подгоняем высоту хоста под масштабированный iframe
+          function fit() {
+            host.style.height = (el.offsetHeight * scale) + 'px';
+          }
+          fit();
+          new ResizeObserver(fit).observe(el);
+        }
+      })();
+    }
+    go();
+  });
+</script>
+
+<style>
+  .tweets-enlarged { width: 100%; }
+  .tweets-enlarged .tweet-host {
+    position: relative;
+    width: 100%;
+    margin: 24px 0;
+  }
+  .tweets-enlarged .tweet-host > iframe {
+    position: absolute; /* чтобы «масштабный» iframe не раздвигал поток */
+    left: 0; top: 0;
+  }
+</style>
+{% endif %}
