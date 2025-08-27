@@ -1,3 +1,8 @@
+<!-- DEBUG: reached tweets include -->
+{% if page.tweets %}
+<!-- DEBUG: page.tweets exists; size={{ page.tweets | size }}; data={{ page.tweets | jsonify }} -->
+{% endif %}
+
 {% if page.tweets and page.tweets.size > 0 %}
 <div id="tweets" class="tweets-enlarged"></div>
 
