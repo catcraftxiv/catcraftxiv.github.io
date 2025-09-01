@@ -20,7 +20,7 @@ Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad 
 
 Thank you [soju] for previews! 
 
-*Thank you Phasse, Nyan Kyet, Cyra 89, Zelda, CaffeinatedKiwi, MrSlender, Asphodel, Halie H, vuego bundes, 白 雪, Michael Hensley, Allanah, Selitha, Craig Kerr, Sam Millar, Peter J, Gypsi Games, Tira, Leslie Carlisle, Katie Brzana, Akeno Skye, Margaret S, Alissa, Chris Sanchez, Belle, Avey, DarkStar0408, Aurora, Djab, Sam_Zelo_, askji26, Chloe Taylor, Kdigital, That 1RedMage, Hamilton Martindale III, Chocola, shin, MyNameIsHelloHello, Akira, Spencer Mannen, Kuri Rosen, Mirajynx, Silent Shadow, kaonashii, Leonardo, Olay Phimphivong, Sapphoris, Jaci C, Horsestros, CBwut, Sy Lindberg, Thalia TV, Salim Buamim, CaraGrace, Alexander Braun, Mel, Alantha Kerath, Kimmy Orlando, Maysie, jenna chu, Fate Seer, Andunie_Noldorwen, Maddison Terrell, drndrn, Artur Kędzierski and Dennis Berendt for your suppoer <3 it does help a lot!!*
+*Thank you Dennis Berendt, Artur Kędzierski, drndrn, Maddison Terrell, Andunie_Noldorwen, Fate Seer, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Salim Buamim, Thalia TV, Sy Lindberg, CBwut, Horsestros, Jaci C, Sapphoris, Olay Phimphivong, Leonardo, kaonashii, Silent Shadow, Mirajynx, Spencer Mannen, Akira, MyNameIsHelloHello, shin, Chocola, Hamilton Martindale III, That 1RedMage, Kdigital, askji26, Sam_Zelo_, Aurora, Avey, Belle, Chris Sanchez, Alissa, Margaret S, Katie Brzana, Leslie Carlisle, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Michael Hensley, Halie H, MrSlender, CaffeinatedKiwi, Zelda, Cyra 89, Phasse, milltrill thompson, Jacob, forgotten [path] and Elina ''Cerise'' Midnight ❤️*
 
 [//]: # (Comments & links:)
 
