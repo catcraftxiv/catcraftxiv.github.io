@@ -11,7 +11,7 @@ Casual pants and top
 ### 6.99 USD OR 10 USD TIER
 > *Get the mod at [patreon] or [boosty]. Public after 30.11.2025!*
 
-- Dalmascan Draped Top, Dalmascan Draped Bottoms
+- Replaces: Dalmascan Draped Top, Dalmascan Draped Bottoms
 - Bodies: YAB & Rue S/M/L with WC/SC, Bibo+ M
 - YAS Required (for Rue+ and YAB+)
 - Dyeable
