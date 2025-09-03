@@ -19,7 +19,7 @@ Casual pants and top
 
 Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [soju] and [idis] for previews! 
+Thank you [soju], [idis] and [Saki] for previews! 
 
 *Thank you Dennis Berendt, Artur Kędzierski, drndrn, Maddison Terrell, Andunie_Noldorwen, Fate Seer, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Salim Buamim, Thalia TV, Sy Lindberg, CBwut, Horsestros, Jaci C, Sapphoris, Olay Phimphivong, Leonardo, kaonashii, Silent Shadow, Mirajynx, Spencer Mannen, Akira, MyNameIsHelloHello, shin, Chocola, Hamilton Martindale III, That 1RedMage, Kdigital, askji26, Sam_Zelo_, Aurora, Avey, Belle, Chris Sanchez, Alissa, Margaret S, Katie Brzana, Leslie Carlisle, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Michael Hensley, Halie H, MrSlender, CaffeinatedKiwi, Zelda, Cyra 89, Phasse, milltrill thompson, Jacob, forgotten [path] and Elina ''Cerise'' Midnight ❤️*
 
