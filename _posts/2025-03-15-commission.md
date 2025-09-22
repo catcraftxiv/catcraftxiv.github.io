@@ -10,6 +10,8 @@ catalogue: false
 
 Commissions is open! It's very depends to the each case, so i can't put anything very specific there, sorry :c Feel free to ask, i dont bite xD 
 
+> *For big comissions there is queue at the moment*
+
 Making a lot of stuff, including, but not limited to: 
 
 - new custom items

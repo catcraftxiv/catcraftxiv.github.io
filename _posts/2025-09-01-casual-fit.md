@@ -6,6 +6,7 @@ date: 2025-08-31 18:37:00 +0300
 permalink: /catalogue/casual-fit/
 tweets:
  - "1962591950990725422"
+ - "1963280051946115117"
 ---
 Casual pants and top
 
