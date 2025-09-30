@@ -8,9 +8,11 @@ catalogue: false
 
 ## Info
 
-Commissions is open! It's very depends to the each case, so i can't put anything very specific there, sorry :c Feel free to ask, i dont bite xD 
+# Custom items and ports: **closed** ⛔
+> Edits, upscales, refits for another bodies: **open** ✅
 
-> *For big comissions there is queue at the moment*
+
+It's very depends to the each case, so i can't put anything very specific there, sorry :c Feel free to ask, i dont bite xD 
 
 Making a lot of stuff, including, but not limited to: 
 
