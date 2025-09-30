@@ -8,7 +8,7 @@ catalogue: false
 
 ## Info
 
-# Custom items and ports: **closed** ⛔
+#### Custom items and ports: **closed** ⛔
 > Edits, upscales, refits for another bodies: **open** ✅
 
 
