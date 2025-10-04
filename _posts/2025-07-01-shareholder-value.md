@@ -4,6 +4,8 @@ title: Shareholder Value
 subtitle: High waisted pants with top
 date: 2025-07-01 19:47:00 +0300
 permalink: /catalogue/shareholder-value/
+tweets:
+ - "1974216027387875496"
 ---
 
 High waisted pants with top
