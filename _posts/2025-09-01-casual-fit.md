@@ -7,6 +7,7 @@ permalink: /catalogue/casual-fit/
 tweets:
  - "1962591950990725422"
  - "1963280051946115117"
+ - "1978664562619474303"
 ---
 Casual pants and top
 
