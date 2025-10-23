@@ -19,7 +19,7 @@ Fantasy styled outfit
 
 Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [Mochi] for previews! 
+Thank you [Mochi] and [Freia] for previews! 
 
 *Thank you Dennis Berendt, Artur Kędzierski, drndrn, Maddison Terrell, Andunie_Noldorwen, Fate Seer, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Salim Buamim, Thalia TV, CBwut, Unu Pendragon, Horsestros, Jaci C, Sapphoris, Olay Phimphivong, Leonardo, kaonashii, Mirajynx, Spencer Mannen, Akira, MyNameIsHelloHello, shin, Chocola, Hamilton Martindale III, LuluGray, That 1RedMage, Kdigital, askji26, Sam_Zelo_, Aurora, Avey, Chris Sanchez, Alissa, Margaret S, Katie Brzana, Leslie Carlisle, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Halie H, MrSlender, CaffeinatedKiwi, milltrill thompson, Jacob, forgotten [path], Elina ''Cerise'' Midnight, Stuart Gelo, Frey Frey, Melissa Lynn, Fey-x3, Steathunt3r 666, Lesley, Jade Johnstone, Jason Downs, Shawna Spicer, Millie Celestra, Shadow and Faith Andersen!! ❤️*
 
