@@ -1,0 +1,53 @@
+---
+layout: default
+title: Fencing Move
+subtitle: Bodice, crop top and gloves
+date: 2025-10-23 03:17:00 +0300
+permalink: /catalogue/fencing-move/
+tweets:
+---
+
+Fantasy styled outfit
+
+### 6.99 USD OR 10 USD TIER
+> *Get the mod at [patreon] or [boosty]. Public after 23.01.2026!*
+
+- Replaces: Star Crew Jacket, Moonlet
+- Bodies: YAB & Rue S/M/L with WC/SC, Bibo+ M
+- YAS Required (for Rue+ and YAB+)
+- Dyeable
+
+Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
+
+Thank you [Mochi] for previews! 
+
+*Thank you Dennis Berendt, Artur Kędzierski, drndrn, Maddison Terrell, Andunie_Noldorwen, Fate Seer, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Salim Buamim, Thalia TV, CBwut, Unu Pendragon, Horsestros, Jaci C, Sapphoris, Olay Phimphivong, Leonardo, kaonashii, Mirajynx, Spencer Mannen, Akira, MyNameIsHelloHello, shin, Chocola, Hamilton Martindale III, LuluGray, That 1RedMage, Kdigital, askji26, Sam_Zelo_, Aurora, Avey, Chris Sanchez, Alissa, Margaret S, Katie Brzana, Leslie Carlisle, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Halie H, MrSlender, CaffeinatedKiwi, milltrill thompson, Jacob, forgotten [path], Elina ''Cerise'' Midnight, Stuart Gelo, Frey Frey, Melissa Lynn, Fey-x3, Steathunt3r 666, Lesley, Jade Johnstone, Jason Downs, Shawna Spicer, Millie Celestra, Shadow and Faith Andersen!! ❤️*
+
+[//]: # (Comments & links:)
+
+[//]: # (Download links:)
+[patreon]: https://www.patreon.com/posts/141839916?pr=true&forSale=true
+[boosty]: https://boosty.to/miaumori/posts/5104b84c-554e-4ff8-a0e1-b2cf43dc3f43
+[heliosphere]: /
+
+[//]: # (Additional previews:)
+[NSFW previews]: /
+
+[//]: # (Links that same for all releases)
+[//]: # (Lovely people <3)
+[idis]: https://x.com/idisxiv
+[Azzi]: https://x.com/AzziXiko
+[Adra]: https://x.com/yourfav_vierelf
+[haruhi]: https://x.com/haruhixiv
+[Saki]: https://x.com/PhotosmithSaki
+[Ellie]: https://x.com/Ellieffxiv
+[Lehlei]: https://x.com/lehlei_xiv
+[soju]: https://x.com/sewerskinky
+[yunifer]: https://x.com/yunixiv
+[Freia]: https://x.com/ForeverFreia
+[Passion]: https://x.com/passiondarling
+[Mochi]: https://x.com/honeybeexiv
+
+[//]: # (Social profiles:)
+[twitter]: https://x.com/hashtag/catcraftxiv
+[bluesky]: https://bsky.app/hashtag/catcraftxiv
