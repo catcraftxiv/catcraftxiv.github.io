@@ -5,6 +5,7 @@ subtitle: Bodice, crop top and gloves
 date: 2025-10-23 03:17:00 +0300
 permalink: /catalogue/fencing-move/
 tweets:
+ - "1981893096263827467"
 ---
 
 Fantasy styled outfit
