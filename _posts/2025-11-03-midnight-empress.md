@@ -19,7 +19,7 @@ Open dress with shorts
 
 Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [Mel] and [idis] for previews! 
+Thank you [Mel], [idis] and [Saki] for previews! 
 
 Thank you Dennis Berendt, Felimor, drndrn, Simon Keenan, Maddison Terrell, Andunie_Noldorwen, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Thalia TV, Unu Pendragon, Horsestros, Jaci C, Sapphoris, kaonashii, Mirajynx, Spencer Mannen, MyNameIsHelloHello, shin, Chocola, Irmina, Hamilton Martindale III, That 1RedMage, Kdigital, Chloe Taylor, askji26, Sam_Zelo_, Aurora, Avey, Chris Sanchez, Alissa, Margaret S, Emee, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Halie H, MrSlender, CaffeinatedKiwi, SharpiFox, milltrill thompson, Jacob, Elina ''Cerise'' Midnight, Frey Frey, Fey-x3, Jade Johnstone, Jason Downs, Shawna Spicer, Millie Celestra, Shadow, Backdraft545, Andi Dale, Andy Gernegross, Benjamin Wright, BlackSpice, Dak Latak, bun, Alex Leyline and KnightmareVK!! That helps a lot <3
 
@@ -30,10 +30,7 @@ Thank you Dennis Berendt, Felimor, drndrn, Simon Keenan, Maddison Terrell, Andun
 [boosty]: https://boosty.to/miaumori/posts/73a71d40-4403-4705-85ac-cfa4891de13b
 [heliosphere]: /
 
-[//]: # (Additional previews:)
-[NSFW previews]: /
-
-[//]: # (Links that same for all releases)
+[//]: # (Credits)
 [//]: # (Lovely people <3)
 [idis]: https://x.com/idisxiv
 [Azzi]: https://x.com/AzziXiko
