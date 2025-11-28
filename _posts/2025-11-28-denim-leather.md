@@ -37,7 +37,7 @@ Thank you [Cyr], [Ellie], [idis], [prim] and [Freia] for previews!
 [Adra]: https://x.com/yourfav_vierelf
 [haruhi]: https://x.com/haruhixiv
 [Saki]: https://x.com/PhotosmithSaki
-[Ellie]: https://x.com/Ellieffxiv
+[Ellie]: https://x.com/Elliesif_
 [Lehlei]: https://x.com/lehlei_xiv
 [soju]: https://x.com/sewerskinky
 [yunifer]: https://x.com/yunixiv
