@@ -23,7 +23,7 @@ Thank you [Cyr], [Ellie], [idis], [prim] and [Freia] for previews!
 
 *Thank you Dennis Berendt, Felimor, drndrn, Simon Keenan, Maddison Terrell, Andunie_Noldorwen, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, Alexander Braun, CaraGrace, Thalia TV, Unu Pendragon, Horsestros, Jaci C, Sapphoris, kaonashii, Spencer Mannen, MyNameIsHelloHello, shin, Chocola, Hamilton Martindale III, LuluGray, Kdigital, Chloe Taylor, askji26, Sam_Zelo_, Aurora, Avey, Chris Sanchez, Alissa, Emee, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Allanah, Halie H, MrSlender, SharpiFox, milltrill thompson, Jacob, Elina ''Cerise'' Midnight, Fey-x3, Jason Downs, Shawna Spicer, Backdraft545, Andi Dale, Benjamin Wright, BlackSpice, Dak Latak, bun, Alex Leyline, Jon York, LazyApophis, Akira_ffxiv, Norelle, Lazerus2k, Rinnibun, yilinzc, CC, Tiki SSBU, Poiz3n, Sera A, and Индрик! Support of each person really does matter!!*
 
-[//]: # (Comments & links below)
+[//]: # (Comments & links)
 
 [//]: # (Download links:)
 [patreon]: https://www.patreon.com/posts/denim-leather-144582103
