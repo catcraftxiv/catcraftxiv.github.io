@@ -21,7 +21,7 @@ Fantasy-themed outfit c: Hope yow will like it!!
 
 Feel free to use `#catcraftxiv` tag on [twitter] and [bluesky]! I will be glad seeing these :>
 
-Thank you [idis], [Me;], [Saki], [prim], [Tira], [Kiku Hatsuko] and [Gem]  for preview pictures!
+Thank you [idis], [Mel], [Saki], [prim], [Tira], [Kiku Hatsuko] and [Gem]  for preview pictures!
 
 *Thank you Dennis Berendt, Felimor, drndrn, Maddison Terrell, Andunie_Noldorwen, MamaMuminka, jenna chu, Maysie, Kimmy Orlando, Alantha Kerath, Mel, CaraGrace, Thalia TV, Sanguine, shin, velvetjava, Chocola, Hamilton Martindale III, LuluGray, Chloe Taylor, askji26, Sam_Zelo_, Aurora, Chris Sanchez, Alissa, Emee, Tira, Peter J, Sam Millar, Craig Kerr, Selitha, Halie H, MrSlender, SharpiFox, milltrill thompson, Jacob, Elina ''Cerise'' Midnight, Fey-x3, Jason Downs, Shawna Spicer, Backdraft545, Benjamin Wright, BlackSpice, Dak Latak, Alex Leyline, Jon York, Norelle, Lazerus2k, Rinnibun, yilinzc, CC, Tiki SSBU, Poiz3n, Sera A, Kashi, xNonoco, Iris, BlitzAceRush, EvilWife, The Voodoo!, Ayashisama, Kazama, DaenyLove and Индрик! Great 2026 everyone!! 🎊*
 
