@@ -21,7 +21,7 @@ Making a lot of stuff, including, but not limited to:
 - edits
 - ask me!
 
-Keeping custom item or port **private cost more**. Please do mention it if you want to keep it private! **Edits are always private.** **Be sure to mention everything you want to be included**!! If you **haven't mention something, do not expect it** to be included.  
+Keeping custom item or port **private cost more**. Please do mention it if you want to keep it private! **Edits are always private.** **Be sure to mention everything you want to be included!!** If you **haven't mention something, do not expect it** to be included.  
 
 ## Payment Options
 
