@@ -21,11 +21,11 @@ Making a lot of stuff, including, but not limited to:
 - edits
 - ask me!
 
-Keeping custom item or port **private** cost more. Please do mention it if you want to keep it private! **Edits are always private.** If you are commissioning custom item, please **be sure to mention everything you want to be included**! You are welcomed to see the wips c:
+Keeping custom item or port **private cost more**. Please do mention it if you want to keep it private! **Edits are always private.** **Be sure to mention everything you want to be included**!! If you **haven't mention something, do not expect it** to be included.  
 
 ## Payment Options
 
-I can accept payment through ko-fi/hipolink/boosty! Please, understand that there is no refunds. Dont forget that sub give a 5% discount!
+I can accept payment through ko-fi/easystart/hipolink/boosty! Please, understand that there is no refunds. 
 
 **Payment for commissions above 50 EUR:** come in halves: 50% before i start, 50% after i will send screenshot from the game.
 
