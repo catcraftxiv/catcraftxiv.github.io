@@ -341,34 +341,47 @@
         patreonOutput.innerHTML = marked.parse(content);
       }
 
+      const commentsAndLinksStartRegex = /^\[\/\/\]:\s*#\s*\(Comments & links:?\)\s*$/i;
+
+      function splitOffCommentsAndLinksBlock(text) {
+        const lines = text.split('\n');
+        const startIndex = lines.findIndex(line => commentsAndLinksStartRegex.test(line.trim()));
+
+        if (startIndex === -1) {
+          return {
+            mainContent: text,
+            commentsBlock: ""
+          };
+        }
+
+        return {
+          mainContent: lines.slice(0, startIndex).join('\n'),
+          commentsBlock: lines.slice(startIndex).join('\n')
+        };
+      }
+
       function updateBoosty() {
         let content = stripYamlFrontMatter(markdownInput.value);
         const divider = "──────── • ✤ • ────────";
-        const lines = content.split("\n");
         const result = [];
         const linkDefinitions = [];
+        const { mainContent, commentsBlock } = splitOffCommentsAndLinksBlock(content);
 
-        let skip = false;
-        for (let line of lines) {
+        for (let line of mainContent.split("\n")) {
           if (/^>\s*\*Get the mod at \[patreon\].*$/i.test(line)) continue;
           if (/^###\s*6\.99 USD OR 10 USD TIER$/i.test(line)) continue;
           if (/^- \*\.{3}see full list of options at right side of \[heliosphere\] page!\*/i.test(line)) continue;
-          if (/^\[\/\/\]:\s?#\s?\(Comments & links:\)/i.test(line.trim())) {
-            skip = true;
-            continue;
-          }
-
-          if (skip) {
-            if (/^\[.*?\]:\s*https?:\/\//.test(line.trim())) {
-              linkDefinitions.push(line.trim());
-            }
-            continue;
-          }
 
           if (line.trim() === "") {
             result.push(divider);
           } else {
             result.push(line.replace(/^\s*-\s+/, "✦ "));
+          }
+        }
+
+        for (const line of commentsBlock.split("\n")) {
+          if (/^\[.*?\]:\s*https?:\/\//.test(line.trim())) {
+            linkDefinitions.push(line.trim());
           }
         }
 
@@ -400,8 +413,8 @@
         // Удаляем строку "Get the mod at ... boosty ..."
         text = text.replace(/^>\s*\*Get the mod at .*boosty.*public after.*$/gim, "");
 
-        // Удаляем блок комментариев от "[//]: # (Comments & links:)"
-        text = text.split(/\[\/\/\]:\s?#\s?\(Comments & links:\)/)[0];
+        // Удаляем блок комментариев/ссылок целиком
+        text = splitOffCommentsAndLinksBlock(text).mainContent;
 
         // Сохраняем ссылки (уже без YAML)
         const linkSource = stripYamlFrontMatter(markdownInput.value);
