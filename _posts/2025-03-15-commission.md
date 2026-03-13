@@ -16,7 +16,7 @@ It's very depends to the each case, so i can't put anything very specific there,
 
 Making a lot of stuff, including, but not limited to: 
 
-- new custom items
+- new custom items (including outfits, piercings, props, weapon, etc... a lot of things!!)
 - ports
 - edits
 - ask me!
