@@ -10,7 +10,7 @@ tweets:
 Leather boots on platform with optional flower pattern
 
 ### 6.99 USD OR 10 USD TIER
-> *Get the mod at [patreon] or [boosty]. Public after 15.07.2026!*
+> *Get the mod at [patreon] or [boosty].
 
 - Replaces: Spring Mayakov Shoes of Aiming
 - Dyeable
