@@ -9,7 +9,7 @@ tweets:
 
 Heels with laced snowflakes
 
-### 6.99 USD OR 10 USD TIER
+### 3.99 USD OR 10 USD TIER
 > *Get the mod at [patreon] or [boosty]. Public after 26.07.2026!*
 
 - Replaces: Bridesmaid's Sandals
