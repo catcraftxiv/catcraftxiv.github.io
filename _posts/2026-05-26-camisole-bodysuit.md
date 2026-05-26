@@ -32,7 +32,7 @@ Thank you [idis], [Eury], [Ellie], [Cyr], [Freia], [Gem], [Nymira] for previews!
 [//]: # (Download links:)
 [patreon]: https://www.patreon.com/posts/159277505
 [boosty]: https://boosty.to/miaumori/posts/b4b8f0e8-8ef1-47a0-a581-ad32d101fe0c
-[heliosphere]: //
+[heliosphere]: /
 
 [//]: # (Links that same for all releases)
 [//]: # (Lovely people <3)
