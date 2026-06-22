@@ -9,7 +9,7 @@ catalogue: false
 ## Info
 
 ### Custom items: **closed** ⛔
-> Ports, edits, upscales, refits for another bodies etc: **open** ✅
+### Ports, edits, upscales, refits for another bodies etc: **open** ✅
 
 
 It's very depends to the each case, so i can't put anything very specific there, sorry :c Feel free to ask, i dont bite xD 
