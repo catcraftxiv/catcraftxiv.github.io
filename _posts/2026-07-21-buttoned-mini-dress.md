@@ -1,3 +1,11 @@
+---
+layout: default
+title: Buttoned Mini Dress
+subtitle: Short dress with sheer options
+date: 2026-07-21 00:01:00 +0400
+permalink: /catalogue/buttoned-mini-dress/
+tweets:
+---
 
 Short dress with buttons
 
