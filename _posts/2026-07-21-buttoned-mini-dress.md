@@ -31,7 +31,7 @@ Feel free to use `#catcraftxiv` tag on [twitter] and stuff! I will be glad seein
 
 Thank you Dennis Berendt, Felimor, drndrn, Maddison Terrell, Andunie_Noldorwen, jenna chu, Maysie, Kimmy Orlando, Mel, CaraGrace, Star Moss, shin, velvetjava, フェルモ カッタネオ, Alissa, Emee, Tira, Peter J, Sam Millar, Selitha, Halie H, MrSlender, milltrill thompson, Jacob, Jason Downs, Shawna Spicer, Benjamin Wright, BlackCrow, LazyApophis, Rinnibun, Kashi, Ayashisama, DaenyLove, Beebo, Kimi W, Julie Ann, peculiarcactus21, Doogle, JDawg, Elliesif, Craig Heintz, DC, Mack, Supercrotch, Michal Vitha, Brianna, Orochi, Wish Dragon, Crysta Wachter, Alvahie, Feinai Orradre, Starlight, RegioBandito, Logan Kuma, Arrow and Индрик!
 
-Thank you [Gem], [Ellie], [prim], [idis], [KikuHatsuko], [LilNicholletta] for previews!
+Thank you [Gem], [Ellie], [prim], [idis], [KikuHatsuko], [LilNicholletta], [Saki] for previews!
 
 [//]: # (Comments & links:)
 
