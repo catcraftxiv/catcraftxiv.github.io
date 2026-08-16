@@ -6,7 +6,6 @@ date: 2026-07-29 21:40:00 +0400
 permalink: /catalogue/open-back-dress/
 tweets:
 videos:
- - "https://youtu.be/334RZ-pmPZ0"
 ---
 
 Top with toggleable knee-length skirt
