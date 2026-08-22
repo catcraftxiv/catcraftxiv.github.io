@@ -2,7 +2,7 @@
 layout: default
 title: Tee & Wide-Leg
 subtitle: Wide-leg pants with cropped T-shirt
-date: 2026-08-23 00:10:00 +0400
+date: 2026-08-23 00:05:00 +0400
 permalink: /catalogue/tee-and-wide-leg/
 tweets:
 videos:
