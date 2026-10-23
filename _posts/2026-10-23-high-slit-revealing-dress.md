@@ -8,6 +8,7 @@ tweets:
   - https://x.com/idisxiv/status/2113661212647174157
 videos:
   - https://youtu.be/QfdcLCI43iY
+  - https://www.youtube.com/watch?v=D7lt6thGgv0
 current view: source
 ---
 
