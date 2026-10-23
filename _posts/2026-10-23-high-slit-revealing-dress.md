@@ -7,7 +7,7 @@ permalink: /catalogue/high-slit-revealing-dress/
 tweets:
   - 
 videos:
-  - 
+  - https://youtu.be/QfdcLCI43iY
 current view: source
 ---
 
