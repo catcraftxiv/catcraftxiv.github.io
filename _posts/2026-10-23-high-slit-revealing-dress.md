@@ -5,7 +5,7 @@ subtitle: Dress and Panties
 date: 2026-10-21 00:00:00 +0400
 permalink: /catalogue/high-slit-revealing-dress/
 tweets:
-  - 
+  - https://x.com/idisxiv/status/2113661212647174157
 videos:
   - https://youtu.be/QfdcLCI43iY
 current view: source
