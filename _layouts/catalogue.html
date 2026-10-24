@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="/./assets/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine+O:wght@400;700&display=swap" rel="stylesheet">
   <title>{{ page.title }}</title>
+  
+  <!-- =====================================================================
+       БЛОК СТИЛЕЙ: Основные стили страницы и карточек
+       ===================================================================== -->
   <style>
     :root {
       --backgroundColor: #28272f;
@@ -61,12 +65,29 @@
       display: block;
     }
 
+    /* =====================================================================
+       БЛОК СТИЛЕЙ ОБЛОЖКИ: Стили для статической картинки
+       ===================================================================== */
     .card-image {
       background-size: cover;
       background-position: center;
-  aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 9;
     }
 
+    /* =====================================================================
+       БЛОК СТИЛЕЙ ВИДЕО: Новые стили для анимированного превью
+       ===================================================================== */
+    .card-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;      /* Видео заполняет блок без искажений, как cover у картинки */
+      display: block;         /* Убирает лишний отступ снизу */
+      pointer-events: none;   /* Игнорирует наведения и клики (событие уходит на ссылку <a>) */
+    }
+
+    /* =====================================================================
+       БЛОК СТИЛЕЙ: Контент карточки и футер
+       ===================================================================== */
     .card-content {
       padding: 1rem;
     }
@@ -88,76 +109,81 @@
       margin-top: 80px;
       padding-bottom: 2em;
     }
-	.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-}
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
 
-.card-header h2 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: var(--accentColor);
-}
+    .card-header h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--accentColor);
+    }
 
-.post-date {
-  font-size: 0.8rem;
-  color: #999;
-  white-space: nowrap;
-}
-.back-button {
-  display: inline-block;
-  margin-bottom: 2rem;
-  color: var(--accentColor);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
+    .post-date {
+      font-size: 0.8rem;
+      color: #999;
+      white-space: nowrap;
+    }
 
-.back-button:hover {
-  color: #ccc;
-}
-.catalogue-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 50px;
-  position: relative;
-}
+    .back-button {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accentColor);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
 
-.catalogue-header .back-button {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accentColor);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
+    .back-button:hover {
+      color: #ccc;
+    }
 
-.catalogue-header .back-button:hover {
-  color: #ccc;
-}
+    .catalogue-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 50px;
+      position: relative;
+    }
 
-.catalogue-header h1 {
-  margin: 0;
-  font-size: 3em;
-}
+    .catalogue-header .back-button {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accentColor);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
 
+    .catalogue-header .back-button:hover {
+      color: #ccc;
+    }
+
+    .catalogue-header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
   </style>
 </head>
 
 <body>
+  <!-- =====================================================================
+       БЛОК ВЫВОДА СТРАНИЦЫ: Шапка, контент (catalogue.md) и футер
+       ===================================================================== -->
   <div class="container">
-<header class="catalogue-header">
-  <a href="/" class="back-button">
-    &#8592; to links
-  </a>
-  <h1>{{ page.title }}</h1>
-</header>
+    <header class="catalogue-header">
+      <a href="/" class="back-button">
+        &#8592; to links
+      </a>
+      <h1>{{ page.title }}</h1>
+    </header>
 
     {{ content }}
   </div>
