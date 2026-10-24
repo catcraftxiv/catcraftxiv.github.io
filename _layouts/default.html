@@ -94,15 +94,6 @@
             border-left: 3px solid var(--accentColor);
         }
 
-        /* Dropcap Effect */
-        /*
-        .container>p:first-of-type:first-letter {
-            -webkit-initial-letter: 4;
-            initial-letter: 4;
-            font-size: 40px;
-        }
-        */
-
         /* Make links match the text color */
         a {
             transition: all 0.3s ease;
@@ -136,11 +127,40 @@
             display: block;
             width: fit-content;
         }
+
+/* ==========================================================================
+   БЛОК СТИЛЕЙ: НАЛОЖЕНИЕ ЗАГОЛОВКА НА БАННЕР
+   Оригинальные стили page-header заменены для динамического контроля отступов
+   ========================================================================== */
 .page-header {
   text-align: left;
-  padding: 40px 0 20px;
+  /* Убран жесткий верхний паддинг, чтобы текст мог свободно подниматься */
+  padding: 0 0 20px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 }
+
+/* Смещение вверх на 55px (с учетом паддинга контейнера 20px + половина текста) */
+.page-header.with-banner {
+  margin-top: -55px; 
+}
+
+/* Стандартный отступ для страниц без обложки */
+.page-header.without-banner {
+  margin-top: 40px;
+}
+
+/* Легкая тень для текста, чтобы не сливался с картинкой */
+.page-header.with-banner .title-wrapper h1 {
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Тень для кнопки назад, чтобы оставалась читаемой на пестром фоне */
+.page-header.with-banner .back-triangle {
+  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.8));
+}
+/* ========================================================================== */
 
 .title-wrapper {
   position: relative;
@@ -161,9 +181,9 @@
   display: inline-block;
   width: 0;
   height: 0;
-border-top: 10px solid transparent;
-border-bottom: 10px solid transparent;
-border-right: 15px solid var(--accentColor);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid var(--accentColor);
 
   cursor: pointer;
   transition: filter 0.2s ease;
@@ -177,39 +197,31 @@ border-right: 15px solid var(--accentColor);
   transform: translateY(-50%) scale(0.95);
 }
 
-
 .page-header h1 {
   font-size: 3.5em;
   margin: 0;
 }
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid var(--accentColor);
-  transform: rotate(-90deg);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
+
+/* ==========================================================================
+   БЛОК СТИЛЕЙ: БАННЕР В СТИЛЕ NOTION
+   ========================================================================== */
+.banner-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: block;
 }
 
-/* Показывать на экранах шире 768px */
-@media (min-width: 769px) {
-  .scroll-to-top.visible {
-    opacity: 0.8;
-    pointer-events: auto;
-  }
-
-  .scroll-to-top:hover {
-    filter: brightness(1.3);
-    opacity: 1;
-  }
+.notion-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Фокус на середину + 12% вверх (50% - 12% = 38%) */
+  object-position: center 38%;
+  display: block;
 }
+/* ========================================================================== */
+
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
@@ -243,15 +255,52 @@ border-right: 15px solid var(--accentColor);
   }
 }
 
-
-
-
     </style>
 </head>
 
 <body>
-    <div class="container">
-<header class="page-header">
+    
+<!-- ==========================================================================
+     БЛОК ЛОГИКИ: ПОИСК БАННЕРА COVER.JPG
+     Ищем картинку cover в папке текущего поста, игнорируя регистр расширений
+     ========================================================================== -->
+{% assign folder_name = page.url | split: '/' | last | remove_last: '/' %}
+{% assign image_folder = "/assets/images/" | append: folder_name | append: "/" %}
+{% assign cover_exists = false %}
+{% assign cover_path = "" %}
+
+{% for file in site.static_files %}
+    {% if file.path contains image_folder %}
+        {% assign filenameparts = file.path | split: "/" %}
+        {% assign filename_full = filenameparts | last %}
+        {% assign filename_no_ext = filename_full | replace: file.extname, "" %}
+        {% if filename_no_ext == "cover" %}
+            {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+                {% assign cover_exists = true %}
+                {% assign cover_path = file.path %}
+                {% break %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<!-- ==========================================================================
+     БЛОК ОТОБРАЖЕНИЯ: ВЫВОД БАННЕРА
+     Отображается на всю ширину до начала основного контейнера
+     ========================================================================== -->
+{% if cover_exists %}
+<div class="banner-wrapper">
+    <img src="{{ cover_path }}" class="notion-banner" alt="Cover Banner">
+</div>
+{% endif %}
+
+    <!-- ==========================================================================
+         БЛОК КОНТЕЙНЕРА: ОТКЛЮЧЕНИЕ ОБРЕЗКИ
+         Если есть баннер, разрешаем контейнеру overflow: visible, чтобы 
+         отрицательный margin заголовка позволил тексту выйти за рамки
+         ========================================================================== -->
+    <div class="container" {% if cover_exists %}style="overflow: visible;"{% endif %}>
+<header class="page-header {% if cover_exists %}with-banner{% else %}without-banner{% endif %}">
 <div class="title-wrapper">
   <a href="/catalogue/" class="back-triangle"></a>
   <h1>{{ page.title }}</h1>
