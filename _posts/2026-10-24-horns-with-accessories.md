@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Horns with Accessories
+title: Horns with Accessories | 7DSO Mannie
 subtitle: Wobbly Physics
 date: 2026-10-24 00:00:00 +0400
 permalink: /catalogue/horns-with-accessories/
@@ -11,7 +11,7 @@ videos:
 current view: source
 ---
 
-Horns with metal accessories, with wobbly physics.
+Horns with metal accessories, with wobbly physics. Recreation of Seven Deadly Sins: Mannie Horns
 
 ### 6.99 USD OR 10 USD TIER
 > *Get the mod at [patreon] or [boosty].*
