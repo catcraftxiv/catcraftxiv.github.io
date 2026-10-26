@@ -11,7 +11,9 @@ videos:
 current view: source
 ---
 
-Horns with metal accessories, with wobbly physics. Recreation of Seven Deadly Sins: Mannie Horns
+Horns with metal accessories, with wobbly physics. 
+
+Recreation of Seven Deadly Sins: Mannie Horns.
 
 ### 6.99 USD OR 10 USD TIER
 > *Get the mod at [patreon] or [boosty].*
