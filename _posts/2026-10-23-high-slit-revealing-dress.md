@@ -35,7 +35,7 @@ Feel free to use `#catcraftxiv` tag on [twitter] and stuff! I will be glad seein
 
 *Thank you M, Nyir, Dennis Berendt, Felimor, drndrn, Telse, Maddison Terrell, Andunie_Noldorwen, jenna chu, Maysie, Kimmy Orlando, CaraGrace, shin, velvetjava, Chris Sanchez, Alissa, Michael F, Emee, Peter J, Sam Millar, Selitha, Halie H, Asphodel, MrSlender, milltrill thompson, Jacob, Jason Downs, Shawna Spicer, Benjamin Wright, BlackCrow, LazyApophis, Rinnibun, Kashi, DaenyLove, Kimi W, JDawg, DC, Michal Vitha, Brianna, Wish Dragon, Crysta Wachter, Feinai Orradre, zenark_408, Cinder, LonelyTactician, KaoriChan, C, Isaura Xiv, Adam Wimmer, Cyphu, cupcakequeen 14, Matthew Gaines, Zylda, Brea Z, RavenMods, SBHoagie, Person Personson, Reflectyourselves, Kyla, Reee, Jay J, Mo, SwaxMain4u and Индрик for support! It is much more impactful that might seems <3*
 
-*Thank you [Cea], [Gem], [idis], [NotEvenLem], [RaylaRanoshii], [Hoshi], [Zay], [Ellie], [LegiCute] for previews!*
+*Thank you [Cea], [Gem], [idis], [NotEvenLem], [RaylaRanoshii], [Hoshi], [Zay], [Ellie], [LegiCute], [Saki] for previews!*
 
 [//]: # (Comments & links:)
 
